@@ -1,0 +1,29 @@
+name: daily-digest
+
+on:
+  schedule:
+    - cron: "0 0,4 * * *"     # UTC 00:00, 04:00 = KST 09:00, 13:00
+  workflow_dispatch:
+
+concurrency:
+  group: daily-digest
+  cancel-in-progress: false
+
+jobs:
+  digest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install requests
+
+      - name: Send daily digest
+        env:
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+          NOTION_DATA_SOURCE_ID: ${{ secrets.NOTION_DATA_SOURCE_ID }}
+          MM_WEBHOOK_URL: ${{ secrets.MM_WEBHOOK_URL }}
+        run: python digest.py

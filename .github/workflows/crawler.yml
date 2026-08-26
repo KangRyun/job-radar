@@ -1,0 +1,40 @@
+name: job-crawler
+
+on:
+  schedule:
+    - cron: "7 * * * *"       # 매시 7분 (신규 공고는 notify가 10분 내 알림)
+  workflow_dispatch:
+
+permissions:
+  contents: write             # crawl_state.json 커밋용
+
+concurrency:
+  group: job-crawler
+  cancel-in-progress: false
+
+jobs:
+  crawl:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install requests
+
+      - name: Run crawler
+        env:
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+          NOTION_DATA_SOURCE_ID: ${{ secrets.NOTION_DATA_SOURCE_ID }}
+        run: python crawler.py
+
+      - name: Commit state
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add crawl_state.json
+          git diff --staged --quiet || git commit -m "chore: update crawl state [skip ci]"
+          git pull --rebase origin main
+          git push
