@@ -2,7 +2,7 @@ name: notion-job-notify
 
 on:
   schedule:
-    - cron: "*/10 * * * *"   # UTC 기준 10분마다
+    - cron: "*/10 0-9,23 * * *"   # KST 08:00~19:00만 (야간 무음)
   workflow_dispatch:          # 수동 실행 버튼
 
 permissions:

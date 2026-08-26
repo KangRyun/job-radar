@@ -2,7 +2,7 @@ name: job-crawler
 
 on:
   schedule:
-    - cron: "7 * * * *"       # 매시 7분 (신규 공고는 notify가 10분 내 알림)
+    - cron: "7 0-9,23 * * *"   # KST 08:00~19:00만 (야간 무음)
   workflow_dispatch:
 
 permissions:

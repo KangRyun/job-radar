@@ -21,9 +21,14 @@ KST = dt.timezone(dt.timedelta(hours=9))
 KEEP_IDS = 500  # 중복 방지용으로 보관할 최근 page_id 개수
 REQUIRED_PROPS = ("기업명", "직무", "링크")  # 마감일 포함 4개가 채워져야 알림
 PENDING_DAYS = 7  # 미완성 행을 재확인하는 최대 기간
+QUIET_START = 19  # KST 19:00부터
+QUIET_END = 8     # KST 08:00까지 알림 중단
 
 
 # --- 시간 유틸 -------------------------------------------------------------
+def is_quiet_hours() -> bool:
+    hour = dt.datetime.now(KST).hour
+    return hour >= QUIET_START or hour < QUIET_END
 def iso_z(d: dt.datetime) -> str:
     return d.astimezone(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%S.000Z")
 
@@ -152,6 +157,10 @@ def send(payload: dict) -> None:
 
 # --- 엔트리포인트 ----------------------------------------------------------
 def main() -> None:
+    if is_quiet_hours():
+        print("야간 무음 (19:00~08:00 KST) — 건너뜀")
+        return
+
     state = load_state()
     notified = state.get("notified", [])
     seen = set(notified)

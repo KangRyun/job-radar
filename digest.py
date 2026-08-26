@@ -3,7 +3,7 @@ import datetime as dt
 
 import requests
 
-from notify import HEADERS, KST, MM_WEBHOOK_URL, NOTION_API, due_text, plain
+from notify import HEADERS, KST, MM_WEBHOOK_URL, NOTION_API, due_text, is_quiet_hours, plain
 
 MAX_LINES = 30  # 메시지가 너무 길어지지 않도록 상한
 
@@ -48,6 +48,10 @@ def line(page: dict) -> tuple[str, str]:
 
 
 def main() -> None:
+    if is_quiet_hours():
+        print("야간 무음 (19:00~08:00 KST) — 건너뜀")
+        return
+
     today = dt.datetime.now(KST).date()
     pages = fetch_open_pages(today.isoformat())
 
