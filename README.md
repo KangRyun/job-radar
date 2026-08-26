@@ -1,12 +1,13 @@
 # job-radar 📡
 
-채용 사이트(직행·자소설닷컴)에서 IT 신입/인턴 공고를 자동 수집해 **Notion 데이터베이스**에 쌓고, 새 공고가 등록되면 **Mattermost**로 알림을 보내는 봇.
+채용 사이트(직행·자소설닷컴·인디스워크)에서 IT 신입/인턴 공고를 자동 수집해 **Notion 데이터베이스**에 쌓고, 새 공고가 등록되면 **Mattermost**로 알림을 보내는 봇.
 서버 없이 **GitHub Actions**만으로 동작한다.
 
 ```mermaid
 flowchart LR
     A[직행 API] -->|매시 7분| C[crawler.py]
-    B[자소설닷컴 API] -->|매시 7분| C
+    B[자소설닷컴 API] -->
+    B2[인디스워크 API] -->|매시 7분| C
     C -->|신규 공고 삽입| D[(Notion DB\n채용공고 리스트업)]
     E[수동 입력] --> D
     D -->|10분마다 폴링| F[notify.py]
@@ -19,7 +20,7 @@ flowchart LR
 
 | 스크립트 | 워크플로 | 스케줄 | 역할 |
 | --- | --- | --- | --- |
-| `crawler.py` | `crawler.yml` | 매시 7분 | 직행·자소설닷컴에서 IT 신입/인턴 공고 수집 → Notion DB 삽입 (`직무` 칸에 `[직행]`/`[자소설]` 출처 표시) |
+| `crawler.py` | `crawler.yml` | 매시 7분 | 직행·자소설닷컴·인디스워크에서 IT 신입/인턴 공고 수집 → Notion DB 삽입 (`직무` 칸에 `[직행]`/`[자소설]`/`[인디스워크]` 출처 표시) |
 | `notify.py` | `notify.yml` | 10분마다 | DB에 새로 생긴 행을 감지해 @all 알림. **기업명·직무·링크·마감일 4개 필드가 모두 채워진 행만** 발송하고, 미완성 행은 채워질 때까지 대기(최대 7일) |
 | `digest.py` | `digest.yml` | 매일 09:00 / 13:00 KST | 마감이 지나지 않은(진행 중) 공고 전체를 마감 임박 순으로 발송 |
 
@@ -83,7 +84,7 @@ python digest.py              # 진행 중 공고 목록 즉시 발송
 
 | 바꾸고 싶은 것 | 위치 |
 | --- | --- |
-| 수집 직군 (예: 게임 추가) | `sources/zighang.py`의 `DEPTH_ONES`, `sources/jasoseol.py`의 `IT_DUTY_IDS` |
+| 수집 직군 (예: 게임 추가) | `sources/zighang.py`의 `DEPTH_ONES`, `sources/jasoseol.py`의 `IT_DUTY_IDS`, `sources/inthiswork.py`의 `TAGS_IT` |
 | @all 멘션 끄기 | `notify.py` `build_payload()`의 `text` |
 | 다이제스트 시간 | `digest.yml`의 cron (UTC 기준, KST−9시간) |
 | 알림 필수 필드 | `notify.py`의 `REQUIRED_PROPS` |

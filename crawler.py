@@ -59,10 +59,19 @@ def insert_notion(job: dict) -> None:
     res.raise_for_status()
 
 
+def cross_key(job: dict) -> str | None:
+    """같은 공고가 여러 사이트에 올라오는 경우를 잡기 위한 교차 중복 키.
+    마감일이 없는 공고는 오탐(같은 회사의 다른 상시공고) 위험이 커서 제외."""
+    if not job.get("deadline"):
+        return None
+    return f"{job['company'].replace(' ', '')}|{job['deadline']}"
+
+
 def run_source(name: str, fetch, state: dict) -> int:
     """fetch() → 최신 공고 리스트. 새 것만 Notion에 넣고 넣은 건수 반환."""
     seen_list = state["seen"].setdefault(name, [])
     seen = set(seen_list)
+    xkeys = state.setdefault("cross_keys", [])
     first_run = not seen_list  # 최초 실행이면 기존 공고를 쏟아붓지 않고 기준선만 잡는다
 
     try:
@@ -73,15 +82,22 @@ def run_source(name: str, fetch, state: dict) -> int:
 
     inserted = 0
     for job in jobs:
+        key = cross_key(job)
         if job["id"] in seen:
+            if key is not None and key not in xkeys:
+                xkeys.append(key)  # 기존 공고의 키도 축적해 타 사이트 중복을 차단
             continue
-        if not first_run and inserted < MAX_INSERT_PER_RUN:
+        duplicate = key is not None and key in xkeys
+        if not first_run and not duplicate and inserted < MAX_INSERT_PER_RUN:
             insert_notion(job)
             inserted += 1
+        if key is not None and not duplicate:
+            xkeys.append(key)
         seen_list.append(job["id"])
         seen.add(job["id"])
 
     state["seen"][name] = seen_list[-KEEP_IDS:]
+    state["cross_keys"] = xkeys[-KEEP_IDS:]
     tag = "기준선 설정" if first_run else f"신규 {inserted}건 삽입"
     print(f"[{name}] 조회 {len(jobs)}건 / {tag}")
     return inserted
@@ -89,6 +105,7 @@ def run_source(name: str, fetch, state: dict) -> int:
 
 def main() -> None:
     # 각 소스 모듈은 fetch() 함수 하나만 제공하면 된다
+    import sources.inthiswork
     import sources.jasoseol
     import sources.zighang
 
@@ -96,6 +113,7 @@ def main() -> None:
     total = 0
     total += run_source("직행", sources.zighang.fetch, state)
     total += run_source("자소설", sources.jasoseol.fetch, state)
+    total += run_source("인디스워크", sources.inthiswork.fetch, state)
     save_state(state)
     print(f"총 {total}건 Notion에 추가")
 
