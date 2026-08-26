@@ -21,16 +21,6 @@ jobs:
 
       - run: pip install requests
 
-      - name: Check secrets are set
-        env:
-          NOTION_DATA_SOURCE_ID: ${{ secrets.NOTION_DATA_SOURCE_ID }}
-        run: |
-          if [ -z "$NOTION_DATA_SOURCE_ID" ]; then
-            echo "::error::NOTION_DATA_SOURCE_ID secret is empty — register it at Settings > Secrets"
-            exit 1
-          fi
-          echo "OK — NOTION_DATA_SOURCE_ID is set (length ${#NOTION_DATA_SOURCE_ID})"
-
       - name: Send daily digest
         env:
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
