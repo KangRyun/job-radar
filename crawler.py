@@ -8,6 +8,7 @@
 import json
 import os
 import pathlib
+import re
 
 import requests
 
@@ -59,12 +60,25 @@ def insert_notion(job: dict) -> None:
     res.raise_for_status()
 
 
+def norm_role(role: str) -> str:
+    """직무명을 교차중복 비교용으로 정규화. 사이트마다 표기가 달라 완벽하지 않다."""
+    return re.sub(r"[^0-9a-z가-힣]", "", role.lower())[:24]
+
+
 def cross_key(job: dict) -> str | None:
     """같은 공고가 여러 사이트에 올라오는 경우를 잡기 위한 교차 중복 키.
-    마감일이 없는 공고는 오탐(같은 회사의 다른 상시공고) 위험이 커서 제외."""
+
+    마감일이 없는 공고는 오탐(같은 회사의 다른 상시공고) 위험이 커서 제외.
+    직무까지 넣는 이유: 회사+마감일만 쓰면 한 회사가 같은 날 마감되는 여러
+    자리를 올렸을 때 하나만 남고 나머지가 조용히 버려진다(어플라이드
+    머티어리얼즈 MesoVision/Metrology 두 자리가 실제로 이렇게 유실됐다).
+    직무 표기가 사이트마다 달라 교차중복 탐지력은 떨어지지만, 보이지 않는
+    유실보다 눈에 보이는 중복이 낫다.
+    """
     if not job.get("deadline"):
         return None
-    return f"{job['company'].replace(' ', '')}|{job['deadline']}"
+    company = job["company"].replace(" ", "")
+    return f"{company}|{job['deadline']}|{norm_role(job['role'])}"
 
 
 def run_source(name: str, fetch, state: dict) -> int:
