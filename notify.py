@@ -24,6 +24,7 @@ PENDING_DAYS = 7  # 미완성 행을 재확인하는 최대 기간
 QUIET_START = 19  # KST 19:00부터
 QUIET_END = 8     # KST 08:00까지는 발송 보류 → 08:00 첫 실행에서 일괄 발송
 MAX_BULK_LINES = 25  # 일괄 발송 메시지에 표시할 최대 줄 수
+MAX_CARDS = 5  # 직접 등록분을 개별 카드로 보낼 최대 건수 (초과 시 목록으로 전환)
 
 
 # --- 시간 유틸 -------------------------------------------------------------
@@ -91,6 +92,12 @@ def get_page(page_id: str) -> dict | None:
         return None
     res.raise_for_status()
     return res.json()
+
+
+def is_crawled(page: dict) -> bool:
+    """크롤러가 넣은 행인지. 크롤러는 직무를 "[직행] ..." 처럼 출처 태그로 시작한다.
+    직접 등록한 행은 개별 카드로 보내 수집분 목록에 묻히지 않게 한다."""
+    return plain(page["properties"].get("직무")).startswith("[")
 
 
 def is_complete(page: dict) -> bool:
@@ -163,7 +170,7 @@ def md_escape(s: str) -> str:
     return s.replace("[", "\\[").replace("]", "\\]")
 
 
-def build_bulk_payload(pages: list[dict]) -> dict:
+def build_bulk_payload(pages: list[dict], heading: str = "새 채용공고") -> dict:
     """여러 건(주로 야간 대기분)을 한 메시지로 묶는다. 건별로 쏘면 도배가 된다.
     마감 임박순으로 정렬 — 아침에 위에서부터 읽으면 급한 것부터 보인다."""
     def due_key(page: dict) -> str:
@@ -185,7 +192,7 @@ def build_bulk_payload(pages: list[dict]) -> dict:
     return {
         "username": "채용공고봇",
         "icon_emoji": ":briefcase:",
-        "text": f"@all 새 채용공고 {len(pages)}건이 등록되었습니다.",
+        "text": f"@all {heading} {len(pages)}건",
         "attachments": [
             {
                 "color": "#2E7CF6",
@@ -241,19 +248,47 @@ def main() -> None:
         else:
             still_pending.append(page["id"])  # 4개 필드가 채워지면 다음 실행에서 발송
 
-    # 3) 발송 — 1건이면 카드, 여러 건이면 목록 한 장. 실패 시 state를 저장하지
-    #    않으므로 다음 실행에서 통째로 재시도된다(부분 발송 없음).
-    if ready:
-        send(build_payload(ready[0]) if len(ready) == 1 else build_bulk_payload(ready))
-        notified.extend(p["id"] for p in ready)
+    # 3) 발송 — 직접 등록분은 개별 카드로 눈에 띄게, 크롤러 수집분은 목록 한 장으로.
+    #    배치 단위로 보내고 실패한 배치만 pending에 되돌려 다음 실행에서 재시도한다
+    #    (이미 나간 배치는 notified에 남으므로 중복 발송되지 않는다).
+    manual = [p for p in ready if not is_crawled(p)]
+    crawled = [p for p in ready if is_crawled(p)]
+
+    batches: list[tuple[str, list[dict]]] = []
+    if manual:
+        # 손으로 넣은 건 보통 1~2건이라 카드로 보낸다. 비정상적으로 많으면 목록으로.
+        if len(manual) <= MAX_CARDS:
+            batches.extend(("새로 등록된 채용공고", [p]) for p in manual)
+        else:
+            batches.append(("새로 등록된 채용공고", manual))
+    if crawled:
+        batches.append(("새로 수집된 채용공고", crawled))
+
+    sent = failed = 0
+    for heading, batch in batches:
+        payload = (
+            build_payload(batch[0])
+            if len(batch) == 1
+            else build_bulk_payload(batch, heading)
+        )
+        try:
+            send(payload)
+        except requests.RequestException as e:
+            failed += 1
+            print(f"발송 실패({heading} {len(batch)}건) → 다음 실행에서 재시도: {e}")
+            still_pending.extend(p["id"] for p in batch)
+        else:
+            sent += len(batch)
+            notified.extend(p["id"] for p in batch)
 
     state["last_checked"] = iso_z(latest)
     state["notified"] = notified[-KEEP_IDS:]
     state["pending"] = still_pending
     save_state(state)
     print(
-        f"조회 {len(pages)}건 / 발송 {len(ready)}건 / 입력대기 {len(still_pending)}건"
-        f" / 기준시각 {state['last_checked']}"
+        f"조회 {len(pages)}건 / 발송 {sent}건 (직접 {len(manual)} / 수집 {len(crawled)})"
+        f" / 메시지 {len(batches)}장, 실패 {failed}장"
+        f" / 입력대기 {len(still_pending)}건 / 기준시각 {state['last_checked']}"
     )
 
 
