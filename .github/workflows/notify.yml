@@ -2,7 +2,7 @@ name: notion-job-notify
 
 on:
   schedule:
-    - cron: "*/10 0-9,23 * * *"   # KST 08:00~19:00만 (야간 무음)
+    - cron: "*/30 0-9,23 * * *"   # 30분 간격, KST 08:00~18:30 (첫 실행 08:00에 야간분 일괄 발송)
   workflow_dispatch:          # 수동 실행 버튼
 
 permissions:
@@ -29,6 +29,7 @@ jobs:
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
           NOTION_DATA_SOURCE_ID: ${{ secrets.NOTION_DATA_SOURCE_ID }}
           MM_WEBHOOK_URL: ${{ secrets.MM_WEBHOOK_URL }}
+          FORCE_SEND: ${{ github.event_name == 'workflow_dispatch' }}  # 수동 실행은 야간에도 발송
         run: python notify.py
 
       - name: Commit state

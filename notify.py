@@ -22,13 +22,20 @@ KEEP_IDS = 500  # 중복 방지용으로 보관할 최근 page_id 개수
 REQUIRED_PROPS = ("기업명", "직무", "링크")  # 마감일 포함 4개가 채워져야 알림
 PENDING_DAYS = 7  # 미완성 행을 재확인하는 최대 기간
 QUIET_START = 19  # KST 19:00부터
-QUIET_END = 8     # KST 08:00까지 알림 중단
+QUIET_END = 8     # KST 08:00까지는 발송 보류 → 08:00 첫 실행에서 일괄 발송
+MAX_BULK_LINES = 25  # 일괄 발송 메시지에 표시할 최대 줄 수
 
 
 # --- 시간 유틸 -------------------------------------------------------------
 def is_quiet_hours() -> bool:
+    """야간이면 True. 무음 중에는 state를 저장하지 않으므로 last_checked가 그대로
+    남고, 아침 첫 실행이 그 사이 생긴 행을 전부 조회해 한 메시지로 묶어 보낸다."""
+    if os.environ.get("FORCE_SEND", "").lower() in ("1", "true", "yes"):
+        return False  # 수동 실행(workflow_dispatch)은 야간에도 즉시 발송
     hour = dt.datetime.now(KST).hour
     return hour >= QUIET_START or hour < QUIET_END
+
+
 def iso_z(d: dt.datetime) -> str:
     return d.astimezone(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%S.000Z")
 
@@ -150,6 +157,45 @@ def build_payload(page: dict) -> dict:
     }
 
 
+def md_escape(s: str) -> str:
+    """링크 텍스트용. 크롤러 행의 직무는 [사람인] 처럼 대괄호로 시작해서
+    이스케이프하지 않으면 마크다운 링크가 깨진다."""
+    return s.replace("[", "\\[").replace("]", "\\]")
+
+
+def build_bulk_payload(pages: list[dict]) -> dict:
+    """여러 건(주로 야간 대기분)을 한 메시지로 묶는다. 건별로 쏘면 도배가 된다.
+    마감 임박순으로 정렬 — 아침에 위에서부터 읽으면 급한 것부터 보인다."""
+    def due_key(page: dict) -> str:
+        return plain(page["properties"].get("마감일")) or "9999-12-31"
+
+    lines = []
+    for page in sorted(pages, key=due_key):
+        props = page["properties"]
+        company = plain(props.get("기업명")) or "(기업명 없음)"
+        role = plain(props.get("직무")) or "-"
+        link = plain(props.get("링크")) or page["url"]
+        due = due_text(plain(props.get("마감일")))
+        lines.append(f"- **{due}** · [{md_escape(company)} · {md_escape(role)}]({link})")
+
+    if len(lines) > MAX_BULK_LINES:
+        dropped = len(lines) - MAX_BULK_LINES
+        lines = lines[:MAX_BULK_LINES] + [f"…외 {dropped}건 (Notion에서 확인)"]
+
+    return {
+        "username": "채용공고봇",
+        "icon_emoji": ":briefcase:",
+        "text": f"@all 새 채용공고 {len(pages)}건이 등록되었습니다.",
+        "attachments": [
+            {
+                "color": "#2E7CF6",
+                "text": "\n".join(lines),
+                "footer": "Notion · 채용공고 리스트업",
+            }
+        ],
+    }
+
+
 def send(payload: dict) -> None:
     res = requests.post(MM_WEBHOOK_URL, json=payload, timeout=15)
     res.raise_for_status()
@@ -158,14 +204,14 @@ def send(payload: dict) -> None:
 # --- 엔트리포인트 ----------------------------------------------------------
 def main() -> None:
     if is_quiet_hours():
-        print("야간 무음 (19:00~08:00 KST) — 건너뜀")
+        print(f"야간 무음 ({QUIET_START}:00~0{QUIET_END}:00 KST) — 0{QUIET_END}:00에 일괄 발송")
         return
 
     state = load_state()
     notified = state.get("notified", [])
     seen = set(notified)
     pending = [p for p in state.get("pending", []) if p not in seen]
-    sent = 0
+    ready: list[dict] = []  # 이번 실행에서 보낼 페이지 (야간 누적분 포함)
 
     # 1) 지난 실행에서 미완성이었던 행 재확인
     still_pending = []
@@ -177,10 +223,8 @@ def main() -> None:
         if parse_iso(page["created_time"]) < cutoff:
             continue  # 너무 오래 방치됨 → 포기
         if is_complete(page):
-            send(build_payload(page))
-            notified.append(pid)
+            ready.append(page)
             seen.add(pid)
-            sent += 1
         else:
             still_pending.append(pid)
 
@@ -192,19 +236,23 @@ def main() -> None:
         if page["id"] in seen or page["id"] in still_pending:
             continue
         if is_complete(page):
-            send(build_payload(page))
-            notified.append(page["id"])
+            ready.append(page)
             seen.add(page["id"])
-            sent += 1
         else:
             still_pending.append(page["id"])  # 4개 필드가 채워지면 다음 실행에서 발송
+
+    # 3) 발송 — 1건이면 카드, 여러 건이면 목록 한 장. 실패 시 state를 저장하지
+    #    않으므로 다음 실행에서 통째로 재시도된다(부분 발송 없음).
+    if ready:
+        send(build_payload(ready[0]) if len(ready) == 1 else build_bulk_payload(ready))
+        notified.extend(p["id"] for p in ready)
 
     state["last_checked"] = iso_z(latest)
     state["notified"] = notified[-KEEP_IDS:]
     state["pending"] = still_pending
     save_state(state)
     print(
-        f"조회 {len(pages)}건 / 발송 {sent}건 / 입력대기 {len(still_pending)}건"
+        f"조회 {len(pages)}건 / 발송 {len(ready)}건 / 입력대기 {len(still_pending)}건"
         f" / 기준시각 {state['last_checked']}"
     )
 

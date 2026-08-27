@@ -26,4 +26,5 @@ jobs:
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
           NOTION_DATA_SOURCE_ID: ${{ secrets.NOTION_DATA_SOURCE_ID }}
           MM_WEBHOOK_URL: ${{ secrets.MM_WEBHOOK_URL }}
+          FORCE_SEND: ${{ github.event_name == 'workflow_dispatch' }}  # 수동 실행은 야간에도 발송
         run: python digest.py

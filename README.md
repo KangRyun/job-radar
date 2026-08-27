@@ -10,7 +10,7 @@ flowchart LR
     B2[인디스워크 API] -->|매시 7분| C
     C -->|신규 공고 삽입| D[(Notion DB\n채용공고 리스트업)]
     E[수동 입력] --> D
-    D -->|10분마다 폴링| F[notify.py]
+    D -->|10분마다 폴링 (08~19 KST)| F[notify.py]
     D -->|09:00 / 13:00 KST| G[digest.py]
     F -->|@all 새 공고 알림| H[Mattermost 채널]
     G -->|진행 중 공고 목록| H
@@ -21,7 +21,7 @@ flowchart LR
 | 스크립트 | 워크플로 | 스케줄 | 역할 |
 | --- | --- | --- | --- |
 | `crawler.py` | `crawler.yml` | 매시 7분 | 직행·자소설닷컴·인디스워크에서 IT 신입/인턴 공고 수집 → Notion DB 삽입 (`직무` 칸에 `[직행]`/`[자소설]`/`[인디스워크]` 출처 표시) |
-| `notify.py` | `notify.yml` | 10분마다 | DB에 새로 생긴 행을 감지해 @all 알림. **기업명·직무·링크·마감일 4개 필드가 모두 채워진 행만** 발송하고, 미완성 행은 채워질 때까지 대기(최대 7일) |
+| `notify.py` | `notify.yml` | 10분마다 (08:00~19:00 KST) | DB에 새로 생긴 행을 감지해 @all 알림. **기업명·직무·링크·마감일 4개 필드가 모두 채워진 행만** 발송하고, 미완성 행은 채워질 때까지 대기(최대 7일). 야간(19:00~08:00)에 쌓인 공고는 **아침 08:00 첫 실행에서 한 메시지로 묶어** 발송 |
 | `digest.py` | `digest.yml` | 매일 09:00 / 13:00 KST | 마감이 지나지 않은(진행 중) 공고 전체를 마감 임박 순으로 발송 |
 
 수동으로 행을 추가해도 크롤러가 넣은 행과 똑같이 알림이 나간다. Notion DB가 유일한 관리 지점이다.
@@ -32,6 +32,11 @@ flowchart LR
 > 💼 **채용공고봇** — @all 새 채용공고가 등록되었습니다.
 > ┃ **STX엔진 · [자소설] 2026 신입/경력 수시채용 (서버운용)**
 > ┃ 직무: … 마감일: 2026-09-08 (D-13)
+
+**야간 대기분 (아침 08:00, @all — 여러 건이면 한 메시지로)**
+> 💼 **채용공고봇** — @all 새 채용공고 4건이 등록되었습니다.
+> ┃ **2026-09-01 (D-5)** · 회사명 · [직행] 백엔드 신입
+> ┃ **미정** · 회사명 · [자소설] 인턴
 
 **데일리 다이제스트 (하루 2회, 멘션 없음)**
 > 📅 **채용공고봇** — 📋 2026-08-26 기준 진행 중인 채용공고 19건
@@ -87,6 +92,8 @@ python digest.py              # 진행 중 공고 목록 즉시 발송
 | 수집 직군 (예: 게임 추가) | `sources/zighang.py`의 `DEPTH_ONES`, `sources/jasoseol.py`의 `IT_DUTY_IDS`, `sources/inthiswork.py`의 `TAGS_IT` |
 | @all 멘션 끄기 | `notify.py` `build_payload()`의 `text` |
 | 다이제스트 시간 | `digest.yml`의 cron (UTC 기준, KST−9시간) |
+| 야간 무음 시간대 | `notify.py`의 `QUIET_START` / `QUIET_END` + `notify.yml`의 cron (둘 다 같이 고쳐야 함) |
+| 일괄 메시지 최대 줄 수 | `notify.py`의 `MAX_BULK_LINES` |
 | 알림 필수 필드 | `notify.py`의 `REQUIRED_PROPS` |
 | 회당 최대 삽입 건수 | `crawler.py`의 `MAX_INSERT_PER_RUN` |
 
@@ -97,6 +104,8 @@ python digest.py              # 진행 중 공고 목록 즉시 발송
 - **웹훅 URL은 비밀**: URL만 알면 누구나 채널에 글을 쓸 수 있다. 리포는 Private 유지, 값은 Secrets로만
 - Notion API 버전 `2025-09-03` (data_sources 엔드포인트) 고정
 - Notion은 `created_time`을 분 단위로 절삭해 반환한다 — notify는 2분 버퍼 + ID 중복 제거로 대응
+- **야간 대기 원리**: 무음 시간대에는 `state.json`을 저장하지 않아 `last_checked`가 그대로 남는다. 아침 08:00 첫 실행이 그 사이 생긴 행을 전부 조회해 한 메시지로 묶어 보낸다(별도 큐 파일 없음). 수집(crawler)은 24시간 계속 돌아 야간 공고를 놓치지 않는다
+- **야간에 즉시 확인하고 싶을 때**: Actions에서 notify/digest를 **Run workflow**로 수동 실행하면 `FORCE_SEND=true`가 붙어 무음을 무시하고 발송한다. 로컬에서는 `FORCE_SEND=1 python notify.py`
 - 직행 API 호스트의 robots.txt는 크롤러 배제를 명시하고 있다. 이 봇은 웹 프론트가 쓰는 것과 동일한 공개 API를 시간당 2회만 호출하는 저부하 개인용이지만, 운영자 요청이 있으면 `crawler.py`에서 해당 소스를 제외할 것
 
 ## 확장 아이디어

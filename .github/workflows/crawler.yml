@@ -2,7 +2,7 @@ name: job-crawler
 
 on:
   schedule:
-    - cron: "7 0-9,23 * * *"   # KST 08:00~19:00만 (야간 무음)
+    - cron: "7 * * * *"       # 매시 7분 — 수집은 24시간(알림만 야간 보류)
   workflow_dispatch:
 
 permissions:
