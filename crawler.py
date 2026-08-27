@@ -1,6 +1,6 @@
 """직행(zighang)·자소설닷컴에서 IT 신입/인턴 공고를 수집해 Notion DB에 삽입.
 
-새 행이 들어가면 notify.py(10분 주기)가 자동으로 Mattermost @all 알림을 보내므로
+새 행이 들어가면 notify.py(30분 주기)가 자동으로 Mattermost @all 알림을 보내므로
 여기서는 '수집 → 중복 제거 → Notion 삽입'만 담당한다.
 
 주의: Notion Integration에 'Insert content' 권한이 켜져 있어야 한다.
@@ -68,11 +68,15 @@ def cross_key(job: dict) -> str | None:
 
 
 def run_source(name: str, fetch, state: dict) -> int:
-    """fetch() → 최신 공고 리스트. 새 것만 Notion에 넣고 넣은 건수 반환."""
+    """fetch() → 최신 공고 리스트. 새 것만 Notion에 넣고 넣은 건수 반환.
+
+    seen에는 '실제로 처리를 끝낸' 공고만 기록한다. 캡에 걸려 못 넣은 건이나
+    삽입이 실패한 건은 기록하지 않아 다음 실행이 그대로 이어서 처리한다.
+    """
     seen_list = state["seen"].setdefault(name, [])
     seen = set(seen_list)
     xkeys = state.setdefault("cross_keys", [])
-    first_run = not seen_list  # 최초 실행이면 기존 공고를 쏟아붓지 않고 기준선만 잡는다
+    xkey_set = set(xkeys)
 
     try:
         jobs = fetch()
@@ -80,26 +84,45 @@ def run_source(name: str, fetch, state: dict) -> int:
         print(f"[{name}] 수집 실패: {e}")
         return 0
 
-    inserted = 0
+    def mark(job_id: str) -> None:
+        seen_list.append(job_id)
+        seen.add(job_id)
+
+    inserted = deferred = 0
+    stopped = ""
     for job in jobs:
         key = cross_key(job)
         if job["id"] in seen:
-            if key is not None and key not in xkeys:
+            if key is not None and key not in xkey_set:
                 xkeys.append(key)  # 기존 공고의 키도 축적해 타 사이트 중복을 차단
+                xkey_set.add(key)
             continue
-        duplicate = key is not None and key in xkeys
-        if not first_run and not duplicate and inserted < MAX_INSERT_PER_RUN:
+
+        if key is not None and key in xkey_set:
+            mark(job["id"])  # 타 사이트에 이미 올라온 공고 — 넣지 않고 처리 완료
+            continue
+
+        if inserted >= MAX_INSERT_PER_RUN:
+            deferred += 1  # seen에 넣지 않는다 → 다음 실행이 이어서 삽입
+            continue
+
+        try:
             insert_notion(job)
-            inserted += 1
-        if key is not None and not duplicate:
+        except Exception as e:
+            # 지금까지 넣은 건 seen에 남아 있으므로 중복 삽입되지 않는다.
+            stopped = f" / 삽입 실패로 중단({job['company']}: {e})"
+            break
+
+        inserted += 1
+        mark(job["id"])
+        if key is not None:
             xkeys.append(key)
-        seen_list.append(job["id"])
-        seen.add(job["id"])
+            xkey_set.add(key)
 
     state["seen"][name] = seen_list[-KEEP_IDS:]
     state["cross_keys"] = xkeys[-KEEP_IDS:]
-    tag = "기준선 설정" if first_run else f"신규 {inserted}건 삽입"
-    print(f"[{name}] 조회 {len(jobs)}건 / {tag}")
+    rest = f" / 다음 실행 대기 {deferred}건" if deferred else ""
+    print(f"[{name}] 조회 {len(jobs)}건 / 신규 {inserted}건 삽입{rest}{stopped}")
     return inserted
 
 
@@ -111,10 +134,13 @@ def main() -> None:
 
     state = load_state()
     total = 0
-    total += run_source("직행", sources.zighang.fetch, state)
-    total += run_source("자소설", sources.jasoseol.fetch, state)
-    total += run_source("인디스워크", sources.inthiswork.fetch, state)
-    save_state(state)
+    try:
+        total += run_source("직행", sources.zighang.fetch, state)
+        total += run_source("자소설", sources.jasoseol.fetch, state)
+        total += run_source("인디스워크", sources.inthiswork.fetch, state)
+    finally:
+        # 중간에 죽어도 이미 삽입한 건은 기록해야 다음 실행이 중복을 만들지 않는다
+        save_state(state)
     print(f"총 {total}건 Notion에 추가")
 
 
