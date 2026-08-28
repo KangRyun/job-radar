@@ -1,8 +1,7 @@
 name: job-crawler
 
+# 정기 실행은 pipeline.yml이 담당한다(state push 경합 방지). 여기는 수동 전용.
 on:
-  schedule:
-    - cron: "7 * * * *"       # 매시 7분 — 수집은 24시간(알림만 야간 보류)
   workflow_dispatch:
 
 permissions:

@@ -1,6 +1,8 @@
 name: daily-digest
 
 on:
+  repository_dispatch:
+    types: [digest]           # GitHub schedule이 멈춰도 외부 크론으로 깨울 수 있게
   schedule:
     - cron: "0 0,4 * * *"     # UTC 00:00, 04:00 = KST 09:00, 13:00
   workflow_dispatch:

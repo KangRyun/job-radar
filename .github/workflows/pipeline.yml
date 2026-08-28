@@ -1,0 +1,67 @@
+name: job-radar-pipeline
+
+# GitHub의 schedule 트리거가 2026-08-26부터 조용히 멈춰(수동 실행은 정상)
+# 외부 크론이 repository_dispatch로 깨울 수 있게 한다. schedule도 함께 두어
+# GitHub 쪽이 복구되면 자동으로 다시 돈다. 두 경로가 겹쳐도 crawl_state/state의
+# 중복 제거가 있어 안전하다.
+on:
+  repository_dispatch:
+    types: [tick]
+  schedule:
+    - cron: "*/30 0-9,23 * * *"   # KST 08:00~18:30
+  workflow_dispatch:
+    inputs:
+      recent_days:
+        description: "수집할 등록일 범위(일)"
+        default: "14"
+      force_send:
+        description: "야간에도 즉시 발송"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: job-radar-state        # crawler/notify가 state를 각자 push하며 경합하지 않도록
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install requests
+
+      - name: Crawl
+        env:
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+          NOTION_DATA_SOURCE_ID: ${{ secrets.NOTION_DATA_SOURCE_ID }}
+          RECENT_DAYS: ${{ github.event.inputs.recent_days || '14' }}
+        run: python crawler.py
+
+      - name: Notify
+        if: always()            # 수집이 실패해도 이미 들어간 공고는 알린다
+        env:
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+          NOTION_DATA_SOURCE_ID: ${{ secrets.NOTION_DATA_SOURCE_ID }}
+          MM_WEBHOOK_URL: ${{ secrets.MM_WEBHOOK_URL }}
+          FORCE_SEND: ${{ github.event.inputs.force_send || 'false' }}
+        run: python notify.py
+
+      - name: Commit state
+        if: always()            # 앞 단계가 실패해도 이미 처리한 만큼은 기록해야
+        run: |                  # 다음 실행이 중복 삽입/중복 발송을 만들지 않는다
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add crawl_state.json state.json
+          git diff --staged --quiet && exit 0
+          git commit -m "chore: update state [skip ci]"
+          for i in 1 2 3; do
+            git pull --rebase origin main && git push && exit 0
+            sleep 5
+          done
+          exit 1
