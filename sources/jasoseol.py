@@ -17,11 +17,29 @@ TARGET_DIVISIONS = {1, 3, 5}
 KST = dt.timezone(dt.timedelta(hours=9))
 
 
-def fetch() -> list[dict]:
+PAGE_SIZE = 30
+
+
+def fetch(since: dt.date | None = None, max_pages: int = 20) -> list[dict]:
+    """after_end_time으로 이미 마감분은 API가 걸러준다. since는 등록일 커트라인."""
     today = dt.datetime.now(KST).date().isoformat()
+    items = []
+    for page in range(1, max_pages + 1):
+        batch = _page(today, page)
+        items.extend(batch)
+        if len(batch) < PAGE_SIZE:
+            break
+        if since is None:
+            break
+        if min((i.get("created_at") or "") for i in batch)[:10] < since.isoformat():
+            break
+    return _parse(items)
+
+
+def _page(today: str, page: int) -> list[dict]:
     params = [
-        ("per_page", "30"),
-        ("page", "1"),
+        ("per_page", str(PAGE_SIZE)),
+        ("page", str(page)),
         ("by_division[]", "1"),
         ("by_division[]", "3"),
         ("by_duty_group_ids", ",".join(str(i) for i in sorted(IT_DUTY_IDS))),
@@ -30,9 +48,12 @@ def fetch() -> list[dict]:
     res = requests.get(API, params=params, timeout=30,
                        headers={"Accept": "application/json"})
     res.raise_for_status()
+    return res.json()
 
+
+def _parse(items: list[dict]) -> list[dict]:
     jobs = []
-    for item in res.json():
+    for item in items:
         matched = [
             e for e in item.get("employments", [])
             if set(e.get("duty_group_ids") or []) & IT_DUTY_IDS
@@ -54,5 +75,6 @@ def fetch() -> list[dict]:
             "role": role,
             "link": f"https://jasoseol.com/recruit/{item['id']}",
             "deadline": end_time[:10] if end_time else None,
+            "posted": (item.get("created_at") or "")[:10] or None,
         })
     return jobs

@@ -264,6 +264,16 @@ def main() -> None:
     if crawled:
         batches.append(("새로 수집된 채용공고", crawled))
 
+    if os.environ.get("SKIP_SEND", "").lower() in ("1", "true", "yes"):
+        # 백필 직후 1회용: 쌓인 공고를 발송하지 않고 발송완료로만 표시한다.
+        notified.extend(p["id"] for p in ready)
+        state["last_checked"] = iso_z(latest)
+        state["notified"] = notified[-KEEP_IDS:]
+        state["pending"] = still_pending
+        save_state(state)
+        print(f"SKIP_SEND — {len(ready)}건을 발송 없이 기록 / 입력대기 {len(still_pending)}건")
+        return
+
     sent = failed = 0
     for heading, batch in batches:
         payload = (

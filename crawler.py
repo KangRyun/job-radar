@@ -5,10 +5,12 @@
 
 주의: Notion Integration에 'Insert content' 권한이 켜져 있어야 한다.
 """
+import datetime as dt
 import json
 import os
 import pathlib
 import re
+import time
 
 import requests
 
@@ -23,7 +25,14 @@ HEADERS = {
 
 STATE_PATH = pathlib.Path("crawl_state.json")
 KEEP_IDS = 2000  # 출처별로 보관할 최근 공고 ID 수
-MAX_INSERT_PER_RUN = 20  # 폭주 방지: 한 번에 넣는 최대 건수
+# 폭주 방지: 한 번에 넣는 최대 건수. 백필 때만 크게 올린다.
+MAX_INSERT_PER_RUN = int(os.environ.get("MAX_INSERT_PER_RUN", "20"))
+# 등록일이 이보다 오래된 공고는 수집하지 않는다. 세 소스 모두 마감 지난 공고를
+# 반환하지 않아 마감일 필터는 무의미하고(측정 결과 과거 마감 0건), 부피의 76%가
+# 마감일 없는 상시모집이라 실질적인 커트라인은 등록일이다.
+RECENT_DAYS = int(os.environ.get("RECENT_DAYS", "14"))
+MAX_PAGES = int(os.environ.get("MAX_PAGES", "20"))
+KST = dt.timezone(dt.timedelta(hours=9))
 
 
 def load_state() -> dict:
@@ -48,21 +57,39 @@ def insert_notion(job: dict) -> None:
     if job.get("deadline"):
         props["마감일"] = {"date": {"start": job["deadline"]}}
 
-    res = requests.post(
-        "https://api.notion.com/v1/pages",
-        headers=HEADERS,
-        json={
-            "parent": {"type": "data_source_id", "data_source_id": DATA_SOURCE_ID},
-            "properties": props,
-        },
-        timeout=30,
-    )
+    body = {
+        "parent": {"type": "data_source_id", "data_source_id": DATA_SOURCE_ID},
+        "properties": props,
+    }
+    for attempt in range(5):
+        res = requests.post("https://api.notion.com/v1/pages",
+                            headers=HEADERS, json=body, timeout=30)
+        if res.status_code == 429:  # Notion 레이트리밋 — Retry-After를 지킨다
+            time.sleep(float(res.headers.get("Retry-After") or 2 ** attempt))
+            continue
+        res.raise_for_status()
+        return
     res.raise_for_status()
 
 
 def norm_role(role: str) -> str:
     """직무명을 교차중복 비교용으로 정규화. 사이트마다 표기가 달라 완벽하지 않다."""
     return re.sub(r"[^0-9a-z가-힣]", "", role.lower())[:24]
+
+
+def cutoff() -> dt.date:
+    return dt.datetime.now(KST).date() - dt.timedelta(days=RECENT_DAYS)
+
+
+def is_recent(job: dict) -> bool:
+    """등록일이 커트라인 이내인가. 등록일을 모르면 버리지 않고 넣는다."""
+    posted = job.get("posted")
+    if not posted:
+        return True
+    try:
+        return dt.date.fromisoformat(posted[:10]) >= cutoff()
+    except ValueError:
+        return True
 
 
 def cross_key(job: dict) -> str | None:
@@ -93,10 +120,12 @@ def run_source(name: str, fetch, state: dict) -> int:
     xkey_set = set(xkeys)
 
     try:
-        jobs = fetch()
+        fetched = fetch(cutoff(), MAX_PAGES)
     except Exception as e:  # 한 소스가 죽어도 다른 소스는 계속
         print(f"[{name}] 수집 실패: {e}")
         return 0
+    jobs = [j for j in fetched if is_recent(j)]
+    old = len(fetched) - len(jobs)
 
     def mark(job_id: str) -> None:
         seen_list.append(job_id)
@@ -136,7 +165,8 @@ def run_source(name: str, fetch, state: dict) -> int:
     state["seen"][name] = seen_list[-KEEP_IDS:]
     state["cross_keys"] = xkeys[-KEEP_IDS:]
     rest = f" / 다음 실행 대기 {deferred}건" if deferred else ""
-    print(f"[{name}] 조회 {len(jobs)}건 / 신규 {inserted}건 삽입{rest}{stopped}")
+    gone = f" / {RECENT_DAYS}일 초과 {old}건 제외" if old else ""
+    print(f"[{name}] 조회 {len(fetched)}건{gone} / 신규 {inserted}건 삽입{rest}{stopped}")
     return inserted
 
 
