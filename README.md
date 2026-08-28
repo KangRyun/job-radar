@@ -125,7 +125,7 @@ SKIP_SEND=1 python notify.py  # 백필분을 발송 없이 발송완료로만 �
 | 수집 직군 (예: 게임 추가) | `sources/zighang.py`의 `DEPTH_ONES`, `sources/jasoseol.py`의 `IT_DUTY_IDS`, `sources/inthiswork.py`의 `TAGS_IT` |
 | @all 멘션 끄기 | `notify.py` `build_payload()`의 `text` |
 | 다이제스트 시간 | `digest.yml`의 cron (UTC 기준, KST−9시간) |
-| 야간 무음 시간대 | `notify.py`의 `QUIET_START` / `QUIET_END` + `notify.yml`의 cron (둘 다 같이 고쳐야 함) |
+| 야간 무음 시간대 | `notify.py`의 `QUIET_START` / `QUIET_END` + `pipeline.yml`의 cron (둘 다 같이 고쳐야 함) |
 | 일괄 메시지 최대 줄 수 | `notify.py`의 `MAX_BULK_LINES` |
 | 알림 필수 필드 | `notify.py`의 `REQUIRED_PROPS` |
 | 회당 최대 삽입 건수 | `crawler.py`의 `MAX_INSERT_PER_RUN` (환경변수로도 조정) |
@@ -135,8 +135,9 @@ SKIP_SEND=1 python notify.py  # 백필분을 발송 없이 발송완료로만 �
 ## 운영 주의사항
 
 - **cron은 UTC.** `0 0 * * *` = KST 09:00. 무료 러너는 혼잡 시 수 분~수십 분 지연될 수 있다
-- **60일 규칙**: 커밋이 60일간 없으면 스케줄이 자동 비활성화되지만, 이 구성은 상태 파일을 계속 커밋하므로 자연 해결됨
-- **웹훅 URL은 비밀**: URL만 알면 누구나 채널에 글을 쓸 수 있다. 리포는 Private 유지, 값은 Secrets로만
+- **60일 규칙**: 커밋이 60일간 없으면 스케줄이 자동 비활성화되지만, 이 구성은 상태 파일을 계속 커밋하므로 자연 해결됨 (다만 현재 정지는 이 규칙과 무관하다 — 위 "GitHub schedule이 멈춰 있다" 참고)
+- **웹훅 URL은 비밀**: URL만 알면 누구나 채널에 글을 쓸 수 있다. 값은 반드시 GitHub Secrets로만 두고 코드·로그에 찍지 말 것. `.env`는 `.gitignore`에 있다
+- **이 리포는 Public이다**: Secrets 자체는 노출되지 않지만 **워크플로 실행 로그는 누구나 볼 수 있다.** 로그에 비밀값을 출력하지 말 것. 외부 크론용 PAT는 이 리포의 `contents` 쓰기만 가진 fine-grained 토큰으로 발급하고 만료일을 짧게 둘 것
 - Notion API 버전 `2025-09-03` (data_sources 엔드포인트) 고정
 - Notion은 `created_time`을 분 단위로 절삭해 반환한다 — notify는 2분 버퍼 + ID 중복 제거로 대응
 - **야간 대기 원리**: 무음 시간대에는 `state.json`을 저장하지 않아 `last_checked`가 그대로 남는다. 아침 08:00 첫 실행이 그 사이 생긴 행을 전부 조회해 한 메시지로 묶어 보낸다(별도 큐 파일 없음). 수집(crawler)은 24시간 계속 돌아 야간 공고를 놓치지 않는다
