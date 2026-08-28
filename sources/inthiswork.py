@@ -8,6 +8,8 @@ import html
 
 import requests
 
+from . import _http
+
 API = "https://inthiswork.com/wp-json/wp/v2/posts"
 
 CAT_ENTRY_INTERN = "191700167"  # 신입/인턴
@@ -31,8 +33,7 @@ def fetch(since: dt.date | None = None, max_pages: int = 20) -> list[dict]:
             "page": str(page),
             "_fields": "id,link,title,tags,date,publishpress_future_action",
         }
-        res = requests.get(API, params=params, timeout=30,
-                           headers={"Accept": "application/json"})
+        res = _http.get(API, params=params)
         if res.status_code == 400:  # 마지막 페이지를 넘어서면 WP가 400을 준다
             break
         res.raise_for_status()

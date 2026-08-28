@@ -7,6 +7,8 @@ import datetime as dt
 
 import requests
 
+from . import _http
+
 API = "https://jasoseol.com/api/v1/employment_companies"
 
 # 대분류 94(IT·인터넷)의 중분류 id — 필터는 중분류만 동작함
@@ -45,8 +47,7 @@ def _page(today: str, page: int) -> list[dict]:
         ("by_duty_group_ids", ",".join(str(i) for i in sorted(IT_DUTY_IDS))),
         ("after_end_time", today),
     ]
-    res = requests.get(API, params=params, timeout=30,
-                       headers={"Accept": "application/json"})
+    res = _http.get(API, params=params)
     res.raise_for_status()
     return res.json()
 

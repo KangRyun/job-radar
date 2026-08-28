@@ -12,6 +12,8 @@ import datetime as dt
 
 import requests
 
+from . import _http
+
 API = "https://api.zighang.com/api/recruitments"
 DEPTH_ONES = ["IT_개발", "AI_데이터"]  # 게임 직군도 원하면 "게임" 추가
 
@@ -37,8 +39,7 @@ def fetch(since: dt.date | None = None, max_pages: int = 20) -> list[dict]:
     by_id: dict[str, dict] = {}
     for params in QUERIES.values():
         for page in range(max_pages):
-            res = requests.get(API, params=params + [("page", str(page))],
-                               timeout=30, headers={"Accept": "application/json"})
+            res = _http.get(API, params=params + [("page", str(page))])
             res.raise_for_status()
             data = res.json()["data"]
             content = data["content"]
