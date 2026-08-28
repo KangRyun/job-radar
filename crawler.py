@@ -78,7 +78,22 @@ def norm_role(role: str) -> str:
 
 
 def cutoff() -> dt.date:
+    """삽입 대상 커트라인(고정). 이보다 오래 등록된 공고는 넣지 않는다."""
     return dt.datetime.now(KST).date() - dt.timedelta(days=RECENT_DAYS)
+
+
+def scan_since(state: dict) -> dt.date:
+    """조회 커트라인(가변). 평시에는 지난 실행 하루 전까지만 훑어 페이지 수를
+    줄이고, 오래 멈춰 있었으면 cutoff()까지 거슬러 올라간다. 고정 커트라인으로
+    매번 훑으면 직행 기준 17페이지 x 2쿼리를 실행마다 받게 된다."""
+    last = state.get("last_crawled")
+    if not last:
+        return cutoff()
+    try:
+        soft = dt.date.fromisoformat(last[:10]) - dt.timedelta(days=1)
+    except ValueError:
+        return cutoff()
+    return max(cutoff(), soft)
 
 
 def is_recent(job: dict) -> bool:
@@ -108,7 +123,7 @@ def cross_key(job: dict) -> str | None:
     return f"{company}|{job['deadline']}|{norm_role(job['role'])}"
 
 
-def run_source(name: str, fetch, state: dict) -> int:
+def run_source(name: str, fetch, state: dict, since: dt.date) -> int:
     """fetch() → 최신 공고 리스트. 새 것만 Notion에 넣고 넣은 건수 반환.
 
     seen에는 '실제로 처리를 끝낸' 공고만 기록한다. 캡에 걸려 못 넣은 건이나
@@ -120,7 +135,7 @@ def run_source(name: str, fetch, state: dict) -> int:
     xkey_set = set(xkeys)
 
     try:
-        fetched = fetch(cutoff(), MAX_PAGES)
+        fetched = fetch(since, MAX_PAGES)
     except Exception as e:  # 한 소스가 죽어도 다른 소스는 계속
         print(f"[{name}] 수집 실패: {e}")
         return 0
@@ -177,15 +192,17 @@ def main() -> None:
     import sources.zighang
 
     state = load_state()
+    since = scan_since(state)
     total = 0
     try:
-        total += run_source("직행", sources.zighang.fetch, state)
-        total += run_source("자소설", sources.jasoseol.fetch, state)
-        total += run_source("인디스워크", sources.inthiswork.fetch, state)
+        total += run_source("직행", sources.zighang.fetch, state, since)
+        total += run_source("자소설", sources.jasoseol.fetch, state, since)
+        total += run_source("인디스워크", sources.inthiswork.fetch, state, since)
+        state["last_crawled"] = dt.datetime.now(KST).date().isoformat()
     finally:
         # 중간에 죽어도 이미 삽입한 건은 기록해야 다음 실행이 중복을 만들지 않는다
         save_state(state)
-    print(f"총 {total}건 Notion에 추가")
+    print(f"총 {total}건 Notion에 추가 (조회 커트라인 {since})")
 
 
 if __name__ == "__main__":
