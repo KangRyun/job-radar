@@ -187,7 +187,6 @@ def run_source(name: str, fetch, state: dict, since: dt.date) -> int:
 
 def main() -> None:
     # 각 소스 모듈은 fetch() 함수 하나만 제공하면 된다
-    import sources.inthiswork
     import sources.jasoseol
     import sources.zighang
 
@@ -197,7 +196,6 @@ def main() -> None:
     try:
         total += run_source("직행", sources.zighang.fetch, state, since)
         total += run_source("자소설", sources.jasoseol.fetch, state, since)
-        total += run_source("인디스워크", sources.inthiswork.fetch, state, since)
         state["last_crawled"] = dt.datetime.now(KST).date().isoformat()
     finally:
         # 중간에 죽어도 이미 삽입한 건은 기록해야 다음 실행이 중복을 만들지 않는다

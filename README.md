@@ -1,6 +1,6 @@
 # job-radar 📡
 
-채용 사이트(직행·자소설닷컴·인디스워크)에서 IT 신입/인턴 공고를 자동 수집해 **Notion 데이터베이스**에 쌓고, 새 공고가 등록되면 **Mattermost**로 알림을 보내는 봇.
+채용 사이트(직행·자소설닷컴)에서 IT 신입/인턴 공고를 자동 수집해 **Notion 데이터베이스**에 쌓고, 새 공고가 등록되면 **Mattermost**로 알림을 보내는 봇.
 서버 없이 **GitHub Actions**만으로 동작한다.
 
 ```mermaid
@@ -10,7 +10,6 @@ flowchart LR
     P[pipeline.yml] --> C[crawler.py]
     A[직행 API] --> C
     B[자소설닷컴 API] --> C
-    B2[인디스워크 API] --> C
     C -->|신규 공고 삽입| D[(Notion DB)]
     E[수동 입력] --> D
     P --> F[notify.py]
@@ -122,7 +121,7 @@ SKIP_SEND=1 python notify.py  # 백필분을 발송 없이 발송완료로만 �
 
 | 바꾸고 싶은 것 | 위치 |
 | --- | --- |
-| 수집 직군 (예: 게임 추가) | `sources/zighang.py`의 `DEPTH_ONES`, `sources/jasoseol.py`의 `IT_DUTY_IDS`, `sources/inthiswork.py`의 `TAGS_IT` |
+| 수집 직군 (예: 게임 추가) | `sources/zighang.py`의 `DEPTH_ONES`, `sources/jasoseol.py`의 `IT_DUTY_IDS` |
 | @all 멘션 끄기 | `notify.py` `build_payload()`의 `text` |
 | 다이제스트 시간 | `digest.yml`의 cron (UTC 기준, KST−9시간) |
 | 야간 무음 시간대 | `notify.py`의 `QUIET_START` / `QUIET_END` + `pipeline.yml`의 cron (둘 다 같이 고쳐야 함) |
@@ -143,7 +142,6 @@ SKIP_SEND=1 python notify.py  # 백필분을 발송 없이 발송완료로만 �
 - **야간 대기 원리**: 무음 시간대에는 `state.json`을 저장하지 않아 `last_checked`가 그대로 남는다. 아침 08:00 첫 실행이 그 사이 생긴 행을 전부 조회해 한 메시지로 묶어 보낸다(별도 큐 파일 없음). 수집(crawler)은 24시간 계속 돌아 야간 공고를 놓치지 않는다
 - **야간에 즉시 확인하고 싶을 때**: Actions에서 notify/digest를 **Run workflow**로 수동 실행하면 `FORCE_SEND=true`가 붙어 무음을 무시하고 발송한다. 로컬에서는 `FORCE_SEND=1 python notify.py`
 - **조회량 자가조정**: 고정 커트라인으로 매번 훑으면 직행 기준 17페이지 x 2쿼리를 실행마다 받는다. `scan_since()`가 지난 실행 하루 전까지만 조회하고, 오래 멈춰 있었으면 `RECENT_DAYS`까지 거슬러 올라간다
-- **레이트리밋**: 인디스워크가 연속 페이지 조회 중 429를 반환한 적이 있다. `sources/_http.get`이 `Retry-After`를 지켜 재시도하고, Notion 삽입도 429를 재시도한다
 - **중복보다 유실이 나쁘다**: `cross_key`는 `회사명|마감일|직무`다. 직무를 빼면 한 회사가 같은 날 마감되는 여러 자리를 올렸을 때 하나만 남고 나머지가 조용히 사라진다
 - 직행 API 호스트의 robots.txt는 크롤러 배제를 명시하고 있다. 이 봇은 웹 프론트가 쓰는 것과 동일한 공개 API를 호출하는 저부하 개인용이지만, 운영자 요청이 있으면 `crawler.py`에서 해당 소스를 제외할 것
 
