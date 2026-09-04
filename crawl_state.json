@@ -1,26 +1,6 @@
 {
   "seen": {
     "직행": [
-      "zighang-ec09f3f6-573d-43e7-8d82-ee6547049ee5",
-      "zighang-fa22e99f-ba65-4fd1-ac5a-94f51b05a947",
-      "zighang-64c8313e-47d8-40b4-b863-f6b4c310f1d3",
-      "zighang-adb82996-e99e-478e-b9b9-df5876bbb82a",
-      "zighang-de388ce4-af39-4380-bb22-bc49612d94d3",
-      "zighang-011b4079-2f5b-4649-b76c-ba35e2c50410",
-      "zighang-1e710f92-206b-49a4-95c6-7c969e62b857",
-      "zighang-db98a389-d90d-4bc6-9212-73901ce9d71d",
-      "zighang-be8ba2f1-2460-4b59-b289-5785bbeb5fea",
-      "zighang-ba378f8f-2b21-4fc7-97a4-bcb7a3af2349",
-      "zighang-6ba0ca3f-a54c-4411-ab5d-777614083380",
-      "zighang-f9576ab1-4831-4732-893b-1009eb0e7e3f",
-      "zighang-d14580b0-ecfa-4a81-9baa-d7c039853951",
-      "zighang-12c2bc1d-bd94-4ec6-80a7-133d62a54bb4",
-      "zighang-6182cd60-3702-434b-a7cc-c6b89f90927c",
-      "zighang-bba453b1-746a-4011-aea9-dbbce6f75e04",
-      "zighang-7ef70526-3076-4603-902b-3092c306598b",
-      "zighang-6d97a62d-805d-450c-b508-0c491180e844",
-      "zighang-b2c48d36-a383-445f-a271-b03668e6e031",
-      "zighang-831b4dfa-40f4-49e9-bee3-6e725c386410",
       "zighang-7bd61418-1540-4ecd-ba50-97f16a34f50b",
       "zighang-827e43df-51bf-4e14-b668-b7107e7bfc03",
       "zighang-3cd71b03-cad9-4160-93e8-7cb2eb1e3982",
@@ -1998,7 +1978,29 @@
       "zighang-eb014ac9-f6e8-40da-8354-a4cc4bf2b22a",
       "zighang-61a52735-31f8-403a-9d7b-ad0d08472571",
       "zighang-b8d42aeb-018b-4963-a3e8-acda265fe9ad",
-      "zighang-a3485156-3941-4676-ac7b-b5736f188881"
+      "zighang-a3485156-3941-4676-ac7b-b5736f188881",
+      "zighang-c8cb5135-55df-41b0-8c2a-eaadc4936c7d",
+      "zighang-e1d4c8fd-e7f7-472f-aa3a-7c8fe215cf08",
+      "zighang-38209f95-c139-4aab-8895-1b13658a333e",
+      "zighang-3a77213a-92ef-4786-881e-5d361912abed",
+      "zighang-880e4eb1-a98b-49d3-a53a-769874e561f6",
+      "zighang-1ec9a6be-ad7f-473e-8f5e-e70739792abb",
+      "zighang-e23d4451-69c1-4436-a063-d05f63cb7420",
+      "zighang-03203161-e161-45c7-94f8-96dee1de5842",
+      "zighang-75d9ca85-5258-4812-b286-ea60341660b3",
+      "zighang-6caffa66-b17e-4f96-b75d-25c5e4706554",
+      "zighang-c66d70f4-68c2-4faa-99e7-b807dec37154",
+      "zighang-632cce25-8a16-4f6d-8782-8c264d59d484",
+      "zighang-4075872a-7d07-413e-bc7e-4597de801e96",
+      "zighang-c7e71507-ed41-4686-8bba-180738035686",
+      "zighang-52938490-176d-4c29-8dc1-4d7dfa8122c4",
+      "zighang-189ae84a-4c6c-491d-a2e5-63db689c350f",
+      "zighang-f4c9d3e1-5d45-42ec-9338-2c26396261a7",
+      "zighang-f4fccc78-e655-4b98-a3cf-63e59978ea73",
+      "zighang-37692939-33d4-40ee-84de-1321cbb9141a",
+      "zighang-dbe0d3e1-6236-4bd7-9b6c-d547e3beba84",
+      "zighang-f1f08452-0cd1-40d6-8d3a-4f8b3ceb11f8",
+      "zighang-8db344f6-ad75-4047-8b03-f4c346d4dd11"
     ],
     "자소설": [
       "jasoseol-105766",
@@ -2075,7 +2077,9 @@
       "jasoseol-105994",
       "jasoseol-106016",
       "jasoseol-106007",
-      "jasoseol-106038"
+      "jasoseol-106038",
+      "jasoseol-106033",
+      "jasoseol-106029"
     ]
   },
   "cross_keys": [
@@ -3067,7 +3071,19 @@
     "더즌|2026-09-30|시스템개발2팀펌뱅킹시스템개발및운영서버백엔드",
     "LX세미콘|2026-09-14|2026년9월석사채용연계형인턴채용부산swar",
     "LG에너지솔루션|2026-09-10|2026년하반기9월신입사원수시채용dataen",
-    "엑시나|2026-11-02|2026인재신입학사및석박사채용parallel"
+    "엑시나|2026-11-02|2026인재신입학사및석박사채용parallel",
+    "천화|2026-10-02|해외은행정보계충당금고도화서버백엔드",
+    "위즈코어|2026-10-02|임베디드개발자신입모집합니다임베디드소프트웨어",
+    "해태제과식품|2026-09-14|채용연계형인턴모집it운용시스템네트워크",
+    "하성씨앤아이|2026-10-01|수내분당java운영자모집신입서버백엔드",
+    "한국기술신용평가|2026-11-02|ktcbit개발웹개발분야전환형인턴채용기타it",
+    "오픈마루|2026-09-30|소프트웨어엔지니어신입채용시스템네트워크",
+    "안랩|2026-09-13|신입경력it인프라운영클라우드devopssre",
+    "이비즈테크|2026-10-04|클라우드엔지니어신입모집devopssre",
+    "주식회사섹타나인|2026-09-13|secta9ine정보보안운영담당채용정보보호보",
+    "LS엠트론|2026-09-13|신입사원수시채용트랙터자율주행시스템개발자율주행",
+    "현대해상화재보험|2026-09-21|2026대졸신입사원채용it정보보호",
+    "안랩|2026-09-13|2026년9월신입채용it운영it인프라운영클라"
   ],
-  "last_crawled": "2026-09-03"
+  "last_crawled": "2026-09-04"
 }
