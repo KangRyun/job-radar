@@ -1,26 +1,6 @@
 {
   "seen": {
     "직행": [
-      "zighang-49fc2e3a-4bd8-4990-9e86-e550e3276b31",
-      "zighang-041cab0d-ae55-4f26-a9b9-258b17caaa1f",
-      "zighang-21bf4d52-3890-41a6-9ebd-67e0228044a1",
-      "zighang-c3127ce9-7db1-4f93-b23a-b56035284463",
-      "zighang-5a0971cb-67e9-4445-bb8b-2ff3b59fca0b",
-      "zighang-3ee0abd5-491c-4fc9-a4bc-5c669ae96322",
-      "zighang-d8859a91-59d3-40c5-926c-7836de9cd45c",
-      "zighang-f1075766-0c99-4e6e-af9a-828336e26328",
-      "zighang-5d4d5520-cc58-473b-bee7-6f397d663c5e",
-      "zighang-a6566aef-0d5f-47c6-9281-202f3b268227",
-      "zighang-d22c3b71-a3b0-4810-addc-cd3b37954bde",
-      "zighang-ec688437-ae90-4eea-8057-4a21a2c2ba47",
-      "zighang-97f2a639-aa9b-4c4f-9135-0176430eb518",
-      "zighang-9d80bbde-5aa0-47df-8905-47b5806a1bd0",
-      "zighang-a6cc8e6d-7209-41d5-bb22-0b42e21582bd",
-      "zighang-7e1cd3a1-d854-4e6f-8ffc-6e6f0a9a231f",
-      "zighang-47b578d4-a13d-4e9b-ba2b-225c8cc030c5",
-      "zighang-4cd12395-d186-4138-997b-aab2d92fe758",
-      "zighang-eef45ed1-d56d-43de-8383-c23892448ed8",
-      "zighang-b51256d3-8c01-4ae5-86da-6bfb0ac9b60c",
       "zighang-40bba2aa-4119-47c6-a15c-a02befdee7b1",
       "zighang-d60529a7-4ca9-4a53-a7b2-4f2001ad760f",
       "zighang-7f077179-bbd2-4cce-8ea9-7e4fa5e8f106",
@@ -2000,7 +1980,27 @@
       "zighang-49140e53-1f7e-41f5-9588-1265e3a84311",
       "zighang-6e1e2f73-3997-417f-b324-88b9d1f901b6",
       "zighang-cfe4f489-0fac-40b3-866d-396a6f26343f",
-      "zighang-cc5077bd-db00-4a32-aeae-57bf33d614a6"
+      "zighang-cc5077bd-db00-4a32-aeae-57bf33d614a6",
+      "zighang-f5fc4e77-9fe5-47f0-821c-d14c05c04322",
+      "zighang-cc9c3308-5e4b-46f8-a326-5f58080e9c6d",
+      "zighang-3c425fe8-47a3-4124-ad80-ee4fd849e981",
+      "zighang-6b761710-9681-4730-9aec-3dfa689bcc92",
+      "zighang-156a4596-ecf4-4349-8dd1-10857f2cbaf4",
+      "zighang-6586e6cd-5ab7-47a7-a901-17fd1dbda396",
+      "zighang-9964e657-2ca3-42d6-902e-1aa61cac9255",
+      "zighang-df83a6dc-4ea8-45b3-824e-7ba3e273471d",
+      "zighang-cfa23d26-0eb9-4603-b98a-50eb5a63394f",
+      "zighang-522db0fc-3112-486b-89df-a18c708adf60",
+      "zighang-dbc2bc0d-2c76-4589-8e11-8433f096c895",
+      "zighang-cf00fbb9-00c8-4add-a7a9-58a31aa6cbfa",
+      "zighang-947472f4-9f0a-4ee7-b784-60ea844ec064",
+      "zighang-8b3cf817-42ef-412c-9139-0d5328a06e45",
+      "zighang-069a9318-4ea6-4df0-80fa-9bb5663d8001",
+      "zighang-b5ef0305-d8b7-48c0-a766-91d6f3030771",
+      "zighang-e4d97426-be5c-4c99-ad2d-00377d8d258a",
+      "zighang-584f6ea8-3283-488d-9f88-fd3682a5d798",
+      "zighang-dd9e9bc9-90aa-487b-9ff9-fd635fed9110",
+      "zighang-ce6d424b-ef44-41df-93fc-b74b30dafebe"
     ],
     "자소설": [
       "jasoseol-105766",
@@ -3216,7 +3216,10 @@
     "고레로보틱스|2026-09-30|펌웨어개발인턴채용임베디드소프트웨어",
     "HP|2027-05-25|presilicondiagnosticsint",
     "율촌|2026-09-20|법무법인유율촌빌링팀채용공고정보보호보안",
-    "한영회계법인|2026-09-13|컨설팅부문고객분석및추천모델개발인턴머신러닝엔지"
+    "한영회계법인|2026-09-13|컨설팅부문고객분석및추천모델개발인턴머신러닝엔지",
+    "LGCNS|2026-09-14|2026하반기lgcns신입사원채용시스템네트워",
+    "천화|2026-10-06|자이홈iotasis전환개발프론트엔드",
+    "지온메디텍|2026-10-03|듀얼소닉연구소fw인원채용임베디드소프트웨어"
   ],
-  "last_crawled": "2026-09-06"
+  "last_crawled": "2026-09-07"
 }
