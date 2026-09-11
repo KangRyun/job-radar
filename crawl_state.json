@@ -1,27 +1,6 @@
 {
   "seen": {
     "직행": [
-      "zighang-51789d58-3fa5-4378-b0a2-977685665232",
-      "zighang-1d808eae-8906-4388-ad7c-a85dfba455eb",
-      "zighang-5b4f1d22-0256-49ae-8a17-7f2e3256bd77",
-      "zighang-d6e3eeb0-a799-4ad8-ae78-145f07114b23",
-      "zighang-880bde2b-6b7f-4ddc-9fa4-95a2008d210d",
-      "zighang-e6913411-64fd-4a6f-8532-4540b068686d",
-      "zighang-4b0f21a8-227d-45eb-8549-fb3d3b2d096e",
-      "zighang-3b29281e-a75b-46f6-87e6-4744985edcca",
-      "zighang-3e5db95d-60fc-430c-aa4f-77d538aa91bb",
-      "zighang-bbb9fe61-651a-45af-acfb-0ea82fccf264",
-      "zighang-ba0d1a83-ee71-4c2b-8801-b8e8812d41af",
-      "zighang-85a09f82-eb5b-4912-a942-527bbb5c935b",
-      "zighang-4e40814a-bd6a-4d75-9db7-21e6688bb694",
-      "zighang-9ab8180d-f839-4823-94ee-1fe872d2f065",
-      "zighang-927744d9-87e0-4c41-a304-8c1191b99d8b",
-      "zighang-186d065a-6ae6-4b03-b20d-c39ec7c80eea",
-      "zighang-149cfa14-2c49-48e4-88bb-25407308e6ae",
-      "zighang-42b0b39e-1630-4d42-b211-7c7751cdafa2",
-      "zighang-07a438a6-1aef-428d-be84-e50704fb692b",
-      "zighang-37809094-edba-42e6-8fdf-27743bee2364",
-      "zighang-028dd832-ae82-42e0-af90-ab08f4d0d5f3",
       "zighang-e0154c98-1f3f-4c10-9116-f13467ada1eb",
       "zighang-fee833ec-5305-45ba-acad-2b439309c725",
       "zighang-83c62acc-119d-40e9-990e-4e0c1f4d1975",
@@ -2000,7 +1979,28 @@
       "zighang-ba03c03a-c422-4b04-af44-9ab1c95d859b",
       "zighang-bbdd535d-43a6-4c65-981d-4d33a5ec22af",
       "zighang-5750967d-4dbf-470c-85c2-edc2f419eb47",
-      "zighang-7f6af51d-0ab2-4374-a3db-81f19207869b"
+      "zighang-7f6af51d-0ab2-4374-a3db-81f19207869b",
+      "zighang-985c5ab4-de67-4418-8263-109b406d7438",
+      "zighang-e644c8db-3a51-42d3-b41e-256fa019c90a",
+      "zighang-4b5faeb4-5499-49aa-a4a6-20ceaabeb7d0",
+      "zighang-8303ec38-265e-4832-81de-514a7cfd26f4",
+      "zighang-3d86bab0-1bdc-44b5-81d9-a3b0294f192e",
+      "zighang-2b119ccb-ac07-43ae-bb4d-73f832e37c51",
+      "zighang-4635cd80-1990-427d-9d04-afa34b398bb7",
+      "zighang-4d24f4d4-a9cb-4244-bc09-45e5c99b46cf",
+      "zighang-6a1e34a8-4b78-488c-a25b-208a3f87848d",
+      "zighang-5e94f113-cc1d-4bb0-a61b-02e6191a5a2c",
+      "zighang-68487b16-bfab-4c0a-ae00-0729e0889504",
+      "zighang-fbaa1460-999d-479b-8afe-5fa768613907",
+      "zighang-be4891cd-e6ff-406f-8a6c-7dd1231e01f7",
+      "zighang-08e6f443-16dc-4220-b72a-34563bbd18a1",
+      "zighang-f7ed7c87-aa5b-418d-95c3-5b31bbfac937",
+      "zighang-0b7476b4-967d-4ce6-a918-30d15020d467",
+      "zighang-17e85262-d080-4bca-8b4f-ed4808e3f2e0",
+      "zighang-3ba6bdf6-f5b2-4464-9daf-03b038962451",
+      "zighang-be42b1a0-14d8-4c60-a9ed-023e21c3abfc",
+      "zighang-ff147803-4c39-48ec-b83b-4d848c8071cc",
+      "zighang-fe437ddf-1cc6-4dd4-9871-f20a2be78941"
     ],
     "자소설": [
       "jasoseol-105766",
@@ -2108,7 +2108,9 @@
       "jasoseol-106130",
       "jasoseol-106129",
       "jasoseol-106158",
-      "jasoseol-106172"
+      "jasoseol-106172",
+      "jasoseol-106184",
+      "jasoseol-106180"
     ]
   },
   "cross_keys": [
@@ -3447,7 +3449,19 @@
     "주성엔지니어링|2026-09-18|수시채용2026년9월신입managercomp",
     "AJ네트웍스|2026-09-20|aj네트웍스9월신입수시채용기타it개발",
     "넥스캠|2026-10-10|주넥스캠스마트팩토리피지컬ai신입엔지니어모집시",
-    "HD현대오일뱅크|2026-09-27|2026년하반기신입사원채용saperp운영er"
+    "HD현대오일뱅크|2026-09-27|2026년하반기신입사원채용saperp운영er",
+    "스마일샤크|2026-10-11|스마일샤크aws클라우드엔지니어인턴채용주야교대",
+    "시스게이트|2026-10-11|경기평택데이터센터시스템운영담당자모집시스템네트",
+    "콘센트릭스|2026-09-30|geo컨설턴트데이터분석가마케팅기획전략",
+    "KIS정보통신|2026-09-20|kis정보통신데이터센터시스템관리devopss",
+    "로슈|2026-09-16|becariodeanalisisdeinfor",
+    "Salesforce|2026-09-25|summer2027internfinanceo",
+    "KIS정보통신|2026-09-20|kis정보통신windowandroid용에이전",
+    "로슈|2026-09-17|datacxintern데이터분석가",
+    "로슈|2026-09-27|estagiariopesquisaclinic",
+    "휴네시온|2026-10-10|주휴네시온리눅스개발자cc인턴모집채용연계형소프",
+    "한국우편사업진흥원(POSA)|2026-09-25|2026신규직원정규직무기계약직채용공고일반직5",
+    "코스맥스그룹|2026-09-30|2026년하반기신입사원채용코스맥스비티아이ri"
   ],
   "last_crawled": "2026-09-11"
 }
