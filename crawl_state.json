@@ -1,10 +1,6 @@
 {
   "seen": {
     "직행": [
-      "zighang-c6ab63e6-ed36-452c-95af-36b8b14fe56e",
-      "zighang-a72ca2e4-82df-404e-b820-fa7f1fe03081",
-      "zighang-3f91c939-f9bb-4c03-be65-7848c184ac48",
-      "zighang-6f8a74a9-a5c7-48fb-956f-154e2d92a234",
       "zighang-c466f053-d619-4964-8a21-afe6bbe7b11d",
       "zighang-481dd14a-b4d8-477e-bd4a-c9394ee9f078",
       "zighang-a1c12fc6-9208-4572-b450-33a4daaafdc3",
@@ -2000,7 +1996,11 @@
       "zighang-6d5954a3-a45a-4333-995a-da3ba142a382",
       "zighang-5cac6d55-bec7-430c-bde8-af7d122fc50e",
       "zighang-6d608889-ea66-4967-b2ad-5f6f9e229551",
-      "zighang-5be68482-fb75-4c34-a353-44f7fadd995d"
+      "zighang-5be68482-fb75-4c34-a353-44f7fadd995d",
+      "zighang-76b14e9b-c5d5-4580-b412-100f16d08155",
+      "zighang-93c72d20-c26c-420c-883f-fbd6b66a301c",
+      "zighang-d5d53031-8dca-4e7b-bbe1-cea707cd8683",
+      "zighang-0056b23f-4d11-4fb1-b83c-0a4362f9bae0"
     ],
     "자소설": [
       "jasoseol-105766",
@@ -2113,7 +2113,8 @@
       "jasoseol-106180",
       "jasoseol-106177",
       "jasoseol-106170",
-      "jasoseol-106166"
+      "jasoseol-106166",
+      "jasoseol-106157"
     ]
   },
   "cross_keys": [
@@ -3554,7 +3555,10 @@
     "코드잇|2026-09-20|코드잇스프린트풀스택웹개발부트캠프모집중웹풀스택",
     "한영회계법인|2026-09-14|ey한영디지털감사및ai리스크분석인턴전환형데이",
     "한영회계법인|2026-09-14|감사부문디지털감사ai리스크분석인턴전환형데이터",
-    "대홍기획|2026-09-20|대홍기획데이터라벨링데이터수집가공인턴기타ai데"
+    "대홍기획|2026-09-20|대홍기획데이터라벨링데이터수집가공인턴기타ai데",
+    "씨에이치알연구소|2026-11-07|mes신입개발자채용응용프로그램",
+    "JPMorganChase|2026-11-29|2027marketsquantitativet",
+    "농심태경|2026-09-20|2026하반기신입사원채용품질관리"
   ],
-  "last_crawled": "2026-09-13"
+  "last_crawled": "2026-09-14"
 }
