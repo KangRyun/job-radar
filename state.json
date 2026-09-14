@@ -1,19 +1,6 @@
 {
-  "last_checked": "2026-09-14T00:36:00.000Z",
+  "last_checked": "2026-09-14T05:40:00.000Z",
   "notified": [
-    "3d32746d-15ab-816a-99e3-f10899e74e35",
-    "3d32746d-15ab-8139-a88e-c579dfe3026c",
-    "3d32746d-15ab-81af-b6ce-ec1104882fc9",
-    "3d32746d-15ab-8171-8d4e-f13e4532743c",
-    "3d32746d-15ab-811f-b3d5-e1482caa9df6",
-    "3d32746d-15ab-8134-9f4a-ed8367fc43d4",
-    "3d32746d-15ab-8155-ab16-f6e4fda5bdd9",
-    "3d32746d-15ab-814f-af1f-dcb8e4bad671",
-    "3d32746d-15ab-81bf-abc7-e6e59eea5081",
-    "3d32746d-15ab-816b-98b1-f819ffe1cf64",
-    "3d32746d-15ab-81a6-8706-ed578908a2e3",
-    "3d32746d-15ab-81f9-bee4-c7bf9c6cd609",
-    "3d32746d-15ab-8101-a028-fddca1edbbb1",
     "3d32746d-15ab-813a-8016-e38072388c0c",
     "3d32746d-15ab-81f2-b1fa-d14adcd1da64",
     "3d32746d-15ab-8126-8cd3-f8cdd473e4b9",
@@ -500,7 +487,20 @@
     "3db2746d-15ab-8166-8e16-ee6d75e4df98",
     "3db2746d-15ab-816e-958f-f7b19b416992",
     "3db2746d-15ab-8181-8d84-fdde1e0cf1f3",
-    "3db2746d-15ab-81b5-97a2-f175d1beb477"
+    "3db2746d-15ab-81b5-97a2-f175d1beb477",
+    "3db2746d-15ab-8131-aa54-cd7c2de78c3c",
+    "3db2746d-15ab-8130-8cfc-d35bea5c9fd9",
+    "3db2746d-15ab-8148-8e78-cf46e5c02f0a",
+    "3db2746d-15ab-81cf-8d81-dcb19fa3382f",
+    "3db2746d-15ab-8142-82e8-c3772dfb287f",
+    "3db2746d-15ab-81a7-8a54-ddedef8d7395",
+    "3db2746d-15ab-81c5-bbd5-e5b0d1037daa",
+    "3db2746d-15ab-8145-b565-e303dce173ad",
+    "3db2746d-15ab-812f-bddf-c12dcfd9485c",
+    "3db2746d-15ab-8149-9bd7-ff9174bcbcc4",
+    "3db2746d-15ab-81b3-8080-c5e34e29c9a9",
+    "3db2746d-15ab-81e9-990f-db65b99d3c57",
+    "3db2746d-15ab-813e-84f9-f9a44881eec5"
   ],
   "pending": []
 }
