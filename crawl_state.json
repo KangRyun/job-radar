@@ -1,28 +1,6 @@
 {
   "seen": {
     "직행": [
-      "zighang-ed003d8a-c14e-4021-be34-9a6c01bbe520",
-      "zighang-398870cd-73e3-42a2-a984-5851c0da8399",
-      "zighang-e1ca7aad-1827-44b1-bf3e-53c2f4ca0caa",
-      "zighang-b804b3e8-a4fe-4872-9569-9185f60a6330",
-      "zighang-e8b49360-712b-4b09-9d53-dba7f30d652b",
-      "zighang-55bf02b0-0ecb-4e6f-8641-92f7c35a1287",
-      "zighang-3511f444-ae83-47fd-87a9-6c729bb623ab",
-      "zighang-ba9669b2-4d11-4f78-a8b0-3db55f552092",
-      "zighang-46cf8788-bd60-4fd9-8616-3ddb5f2610b0",
-      "zighang-462df6e4-b8ce-419a-b185-c499161caa45",
-      "zighang-c4ab0e03-8da6-43cd-bd6a-9b984d0d462e",
-      "zighang-2167cca5-ff78-414d-8a72-7d8ba63dbe47",
-      "zighang-0a616d93-bd46-4534-82c0-9542dd409b7d",
-      "zighang-b30e6c23-858a-41c9-8b54-1fbc0fbfcfff",
-      "zighang-57520f35-df41-415b-b334-f1cea95a4b79",
-      "zighang-47873b52-564b-4ba5-882b-76cdb9b0bd02",
-      "zighang-275b40f6-ac47-4402-a24b-5b1c4b5c3995",
-      "zighang-637ce31d-2bab-42c5-905d-36aad0af167a",
-      "zighang-08136baf-3c2d-40b2-8938-24fb284d1834",
-      "zighang-e8787869-8afe-431b-a9e7-3b1ab09ab1e1",
-      "zighang-ac42d4f6-f1c4-4dd1-817a-ec324fcb37cd",
-      "zighang-cf45d025-4f82-4211-a2e7-bf2ce0d99b53",
       "zighang-1a2adda0-b273-48fb-8ba3-67ae3129be6f",
       "zighang-41e1cc42-c2e5-442b-a4c6-64b61737c90d",
       "zighang-670ff3eb-4729-41b4-b388-d75e0fa24899",
@@ -2000,7 +1978,29 @@
       "zighang-21801cc0-1d45-49c0-a7dc-0ac933e85c3f",
       "zighang-14316cb3-dd5c-404a-8e24-c7935a88812e",
       "zighang-a32a4150-edc8-4ef2-badb-3c860e67e56f",
-      "zighang-f582b539-693b-4305-a47c-6ac86f60a0af"
+      "zighang-f582b539-693b-4305-a47c-6ac86f60a0af",
+      "zighang-6dfb64cd-7423-42dd-aeb5-bfd3172fe6c3",
+      "zighang-fd8fa345-554d-4bb4-9a12-3b61b9bb1b26",
+      "zighang-5a412c23-87d4-430f-8734-d3dce6bf17b6",
+      "zighang-d8980c9b-7bce-4ad6-a2a0-30bcc8491f45",
+      "zighang-f1e4ae85-0406-4858-8dfc-b041b87b9ad5",
+      "zighang-8e899695-ef0b-4676-a97e-de14f9329a66",
+      "zighang-ea7af488-b816-4bc2-9b9f-bded9e4f86ce",
+      "zighang-5134666d-396d-4d55-ad98-1a29f17fb559",
+      "zighang-dc4ef8ee-ece1-4596-8c91-77ebcc411d49",
+      "zighang-501421a9-14c4-4a67-9ac2-63bb5809360d",
+      "zighang-20a8970d-3add-4581-a06c-e881da7a6a64",
+      "zighang-c91431f0-613f-4bbd-9e7d-de83538bd49d",
+      "zighang-f73cc614-fc52-4e1f-b29b-d2b9481efc4e",
+      "zighang-47a47e16-e96c-435b-9dda-f249e97db052",
+      "zighang-6998afec-60f6-43d8-a8ec-4ce734bee1ec",
+      "zighang-e550ec2e-7c77-47cf-8919-965cadf1a207",
+      "zighang-af0f5670-2ad7-40b6-81a3-2dfb5200d315",
+      "zighang-190642c4-be51-4671-929e-7e080a2ed128",
+      "zighang-893c9cbe-5966-4bae-96bd-9cebf99c3913",
+      "zighang-1220e776-1e09-4c81-b9ee-7bb1441e6ac5",
+      "zighang-91b0a6d6-bfd4-4391-80ba-db11042b6b1b",
+      "zighang-c6590d0a-7c45-4f92-93fc-2f4dd48f1004"
     ],
     "자소설": [
       "jasoseol-105766",
@@ -2122,7 +2122,9 @@
       "jasoseol-106208",
       "jasoseol-106211",
       "jasoseol-106225",
-      "jasoseol-106220"
+      "jasoseol-106220",
+      "jasoseol-106143",
+      "jasoseol-106206"
     ]
   },
   "cross_keys": [
@@ -3614,7 +3616,19 @@
     "한화오션|2026-09-30|2026년하반기신입사원채용axai개발기타ai",
     "한국투자증권|2026-10-19|fy2026일반공채신입사원5급itdigita",
     "창업진흥원(KISED)|2026-09-17|2026년svcseoul인턴십프로그램학생인턴",
-    "대한항공|2026-09-28|2027년대한항공전문인력신입경력모집정보보안신"
+    "대한항공|2026-09-28|2027년대한항공전문인력신입경력모집정보보안신",
+    "모은정보기술|2026-09-27|주모은정보기술소프트웨어개발신입모집소프트웨어엔",
+    "아이지|2026-10-14|주아이지유니티3d신입채용응용프로그램",
+    "HL클레무브|2026-09-28|hlklemove2026년9월연구지원직단기계",
+    "한화오션|2026-09-30|2026년하반기신입사원채용ax설계지능화ai리",
+    "아이지|2026-10-14|주아이지유니티3d신입채용vrar3d",
+    "이지케어텍|2026-09-20|2026년이지케어텍직업계고신입개발자채용채용연",
+    "네이버|2026-09-23|네이버랩스로봇구동팩냉각시스템개발을위한임베디드",
+    "삼일아엔씨|2026-11-13|주삼일아엔씨네트워크및pc엔지니어모집시스템네트",
+    "리얼시큐|2026-10-14|네트워크보안엔지니어모집시스템네트워크정보보호보",
+    "SK증권|2026-09-28|sk증권채용연계형인턴및경력직공개채용시스템네트",
+    "기아|2026-09-29|2026하반기신입채용품질보증및안전품질서비스s",
+    "한국공항공사(KAC)|2026-09-29|2026년도하반기신입사원등공개채용일반직5급갑"
   ],
   "last_crawled": "2026-09-15"
 }
