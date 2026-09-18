@@ -1,26 +1,6 @@
 {
   "seen": {
     "직행": [
-      "zighang-59535b04-00d0-41d1-8d78-46bb74d958ca",
-      "zighang-92354908-c368-4a1f-b561-213c403d7320",
-      "zighang-5191e4af-aa74-4bb3-8927-dc9963010f56",
-      "zighang-21a073ff-1c5a-455a-856b-fe0d9fcd2da7",
-      "zighang-b1633133-7675-4233-8cf2-ebe6ae0ff0ee",
-      "zighang-b7845cad-dcee-4697-af16-a4b0faecfd4c",
-      "zighang-2caab6d4-9c10-477b-b400-6453010f57a2",
-      "zighang-1faeef77-3e72-45cc-b943-d7f6dcd06795",
-      "zighang-6b99142d-b92f-41aa-ab72-080d252c0539",
-      "zighang-aa4e10d7-ce8c-44d2-bb50-f7e34f838d26",
-      "zighang-a7557506-04de-48ac-8e89-995c2e71e6a2",
-      "zighang-c679bbe4-3088-4475-a3cf-ac71cd924009",
-      "zighang-0a334e73-720b-4a7f-b9b6-f43398adc6a2",
-      "zighang-db0c6e80-1216-40d9-8de7-cbec7a68a735",
-      "zighang-447fa706-17ab-4f7f-a9d4-c285e28f23cf",
-      "zighang-56aa3b8d-d5eb-4bf0-bf4e-9d8e9c3f043f",
-      "zighang-f21ff032-0281-4ce1-988a-30c12eb549cc",
-      "zighang-b96fee3b-cf13-469a-bdb1-79e2d404e18a",
-      "zighang-6606c0f2-178f-4c27-8b61-411974e3aae2",
-      "zighang-d27943c3-ebef-4a1e-b822-6e47004263ee",
       "zighang-8bf92c6d-f422-472a-82ba-27d812b28c61",
       "zighang-6bce23f6-67cd-4514-9533-671905b1f402",
       "zighang-d42d758c-848e-4c86-b40d-b528e0b2e73f",
@@ -2000,7 +1980,27 @@
       "zighang-b26bdf5d-fce0-4adb-9788-c818698d325e",
       "zighang-397faf98-be41-442e-9dc5-d40a99bf0945",
       "zighang-5c501112-b85e-4d87-860d-5251acf791cf",
-      "zighang-ff471059-6de9-412c-938e-ba09ecc96e34"
+      "zighang-ff471059-6de9-412c-938e-ba09ecc96e34",
+      "zighang-d6662507-9107-4e6e-a077-7987abf0e099",
+      "zighang-ddfd43df-ae93-4de5-9f0c-afa2ba8f1d76",
+      "zighang-14393d42-497a-4ba2-929d-971a1d45b19a",
+      "zighang-6f7f1918-ad06-40ee-81ba-6f8689209215",
+      "zighang-43cbd907-c887-4c86-9c16-43132c54729e",
+      "zighang-7e179cf8-2fc3-44bd-b70c-a92bab626275",
+      "zighang-ec1c1d7e-4716-4e48-9948-4fa66d923902",
+      "zighang-3ca59f3d-2632-4db2-bf65-1b74c8bdbf01",
+      "zighang-0c6be448-4545-497f-a0ee-f654fa821ebc",
+      "zighang-2fedc85e-384c-4eaa-8530-6fa0243b1030",
+      "zighang-1b0c0479-24d4-4ef5-a1bf-beb9aa5e47ef",
+      "zighang-7c6535f9-25bf-495a-8568-4384aa5655bd",
+      "zighang-eb86069f-3d26-4f18-96aa-f4e56ef6a7b1",
+      "zighang-89580c63-7030-4292-b6cb-81ffb9669ac9",
+      "zighang-92242fd4-53bc-4764-906c-c9343900871e",
+      "zighang-d74f7b3f-38b5-42d3-884f-73599b654784",
+      "zighang-fca57452-be44-4235-8396-981066134fd6",
+      "zighang-b33ccf25-ac19-43b7-86e7-05462e89f05a",
+      "zighang-79f975d9-c9ea-4668-9985-9640409997a2",
+      "zighang-93ba3461-476e-47b2-b40b-de44fbfe08a8"
     ],
     "자소설": [
       "jasoseol-105766",
@@ -2140,7 +2140,10 @@
       "jasoseol-106268",
       "jasoseol-106238",
       "jasoseol-106263",
-      "jasoseol-106312"
+      "jasoseol-106312",
+      "jasoseol-106294",
+      "jasoseol-106259",
+      "jasoseol-106234"
     ]
   },
   "cross_keys": [
@@ -3789,7 +3792,18 @@
     "고려대학교안암병원|2026-09-23|안암병원26155asp사업관련전산개발계약직직",
     "아이비앤아이|2026-09-30|사내보안sw관리및oa기기운영정보보호보안",
     "이스트시큐리티|2026-10-17|악성코드분석가신입채용정보보호보안",
-    "브라이센코리아|2026-11-16|모바일카메라화질튜닝엔지니어신입응용프로그램"
+    "브라이센코리아|2026-11-16|모바일카메라화질튜닝엔지니어신입응용프로그램",
+    "코드비전|2026-10-18|석박사인공지능연구원ai리서치",
+    "안랩|2026-10-25|신입mlmlops엔지니어채용mlops",
+    "신세계그룹|2026-10-12|2027년신입사원채용정보보호보안경영지원시스템",
+    "이스트시큐리티|2026-10-17|악성코드분석가경력채용정보보호보안",
+    "인피니언테크놀로지스코리아|2026-10-17|인피니언코리아internshipedgeai기",
+    "DHL|2026-11-26|traineefinancecommercial",
+    "한국복합물류|2026-09-23|cj대한통운자회사한국복합물류정보통신신입사원모",
+    "웨이센|2026-09-30|frontend개발자프론트엔드",
+    "슈피겐코리아|2026-09-27|2026년경력및채용연계형인턴공개채용테스트엔지",
+    "금융결제원|2026-10-02|2027년상반기신입직원채용전산직",
+    "신세계그룹|2026-10-12|2027년신입사원채용sckai기획개발ic프로"
   ],
   "last_crawled": "2026-09-18"
 }
