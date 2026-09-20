@@ -1,20 +1,6 @@
 {
   "seen": {
     "직행": [
-      "zighang-2e675d03-236c-43e6-8414-da0cbe8905b7",
-      "zighang-a6ed8b76-23ec-4bd4-aa77-ccc5b27daaf7",
-      "zighang-9cc0c9df-fcaa-4ede-89fd-d40e1a62c20e",
-      "zighang-be9bf0fc-7942-449e-b619-6e0741bc78cc",
-      "zighang-bc554a05-48bf-470f-96f3-85c2df1989bb",
-      "zighang-36beb901-f5b4-4535-b351-6cf548b3ec84",
-      "zighang-b5241742-574b-45dc-bdb5-1cbe5e6ead7d",
-      "zighang-0fb809d7-d6ff-42e7-a17d-8561243e1810",
-      "zighang-83b15851-db48-4382-9963-e214809b739a",
-      "zighang-d721b94b-29d5-485a-b1fa-e603d7d68f0e",
-      "zighang-248c08a8-9f86-4a3b-a375-7079b0629ef8",
-      "zighang-a8ec5e59-1976-4e4b-845b-c90a39cd6c9d",
-      "zighang-6f2d6228-2f49-4a7f-bfe1-acf4cbfeef6e",
-      "zighang-13713c06-ca69-4e3c-8011-47b9e2790c51",
       "zighang-4ff3e8ae-d85f-4730-b841-f666545d5929",
       "zighang-59c918db-60e0-4703-9cf9-d1121f324fff",
       "zighang-c81741b6-54c4-4bee-8768-96e49a77b926",
@@ -2000,7 +1986,21 @@
       "zighang-55881d9d-40fb-4e8b-8f5e-a856f62e60ec",
       "zighang-50747b8d-7e8e-4157-bfe3-e51fd7eed045",
       "zighang-733ce8ae-323f-4e74-b70b-8f72303ddc8e",
-      "zighang-0fcfda15-0723-4039-b88a-9cd107a019da"
+      "zighang-0fcfda15-0723-4039-b88a-9cd107a019da",
+      "zighang-559b5c2a-00d0-4cde-ac2c-2d68228eb8c0",
+      "zighang-0cad30bc-7d2b-4728-b2e2-af54f3922ffa",
+      "zighang-02cf6042-269b-496f-aaac-c6890a1e1119",
+      "zighang-fcbdaac3-e37d-49f4-af7e-d7df5f371c04",
+      "zighang-73e19350-d39f-44a3-ad02-d60243bea3f9",
+      "zighang-2dfce37d-79b5-4aaf-a079-cd70282e3549",
+      "zighang-25864f77-cae9-45fe-8175-79997ab67563",
+      "zighang-534b8ce4-603e-4ff2-a24f-bb3f62e3c30c",
+      "zighang-ad8a618f-c05e-4a14-b51f-4bf92469b38a",
+      "zighang-9c748dd8-104a-43f6-a4a3-efbf94953db7",
+      "zighang-196dfc45-bcd4-42c7-99e3-3e9877669374",
+      "zighang-4c12d04f-1ca3-4375-a75c-cd43473ce34b",
+      "zighang-6aa05257-e5f9-48d8-a285-984c81a0c585",
+      "zighang-0eff5799-b6fe-416a-b700-d20d342c2b20"
     ],
     "자소설": [
       "jasoseol-105766",
@@ -3863,7 +3863,9 @@
     "이스트소프트|2026-09-27|미래내일일경험참여자모집회계세무기술지원마케팅회",
     "넥스트그라운드|2026-10-02|인턴프론트엔드개발자프론트엔드",
     "LX엠엠에이|2026-09-27|lxmma2026년하반기신입경력사원수시채용e",
-    "현대위아|2026-09-28|2026년석박사연구장학생선발ai리서치전기전자"
+    "현대위아|2026-09-28|2026년석박사연구장학생선발ai리서치전기전자",
+    "셰플러코리아|2026-09-28|이천사업장구비테스코테크놀로지스코리아9월수시채",
+    "네이버웹툰|2026-09-27|ai서비스기획체험형인턴채용ai서비스기획"
   ],
   "last_crawled": "2026-09-20"
 }
