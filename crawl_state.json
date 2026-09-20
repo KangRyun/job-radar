@@ -1,26 +1,6 @@
 {
   "seen": {
     "직행": [
-      "zighang-2dd1738f-f13a-4ee8-bdd8-6aa0681c4c78",
-      "zighang-675df61d-6a3d-4906-a879-5ac9b362b48a",
-      "zighang-1680b309-4ee9-4eae-807a-8a34dcc7acee",
-      "zighang-1dd386f9-484c-4402-804c-6df883904ddd",
-      "zighang-0c6fc3ac-b0d2-4aa7-9c1f-70c76273c43e",
-      "zighang-6f8e1763-d5d1-4b32-9727-8428cca68b5c",
-      "zighang-77d2465b-321d-4d87-9fbd-b99ae4058d4b",
-      "zighang-376613a4-2685-40b3-921d-89476b7b5105",
-      "zighang-2e1aeb7b-b2ac-4aa0-a682-52d72ab9c09d",
-      "zighang-4acb40e7-9caf-4958-961a-f3e1276f41f7",
-      "zighang-7406939b-0dcb-469b-810e-013bd58acaaf",
-      "zighang-9d94950b-37d0-4ded-a147-85ff89bbb147",
-      "zighang-fbb59c22-d66c-4d8d-81d1-18e2426fc5e4",
-      "zighang-4e76ba74-bb4a-4577-b48e-7eab7cc39a18",
-      "zighang-396de677-c138-45cf-a5b0-12517eae8747",
-      "zighang-439763d3-bf02-40f2-964f-589d17d7876b",
-      "zighang-33cb2289-e759-4f30-bcbb-41eeac1ce2b7",
-      "zighang-457665fe-b855-4a2b-bb87-b5f007b929ab",
-      "zighang-a4919fe4-7049-4934-9ec3-41e8fc0e0c7e",
-      "zighang-1c477c31-c88c-40e0-a08b-f4676ed786ad",
       "zighang-2e675d03-236c-43e6-8414-da0cbe8905b7",
       "zighang-a6ed8b76-23ec-4bd4-aa77-ccc5b27daaf7",
       "zighang-9cc0c9df-fcaa-4ede-89fd-d40e1a62c20e",
@@ -2000,7 +1980,27 @@
       "zighang-e770f29e-755d-45ad-a829-03754cb6a63d",
       "zighang-1088ec22-152b-4ae1-9c85-dc793f43f07f",
       "zighang-84af1e96-ade4-48a0-9f4a-412f7a24032f",
-      "zighang-1b5b6481-b11c-4ef6-85de-ec165833d305"
+      "zighang-1b5b6481-b11c-4ef6-85de-ec165833d305",
+      "zighang-0e96144a-29c5-4b4b-aab5-68035daa77a1",
+      "zighang-08f0df44-05de-4985-83a6-fb4fb2162b44",
+      "zighang-33f95f23-460e-46ef-b7d4-ad75cae3e85b",
+      "zighang-ec2b0c1a-443e-409f-aebc-fc46c8224c14",
+      "zighang-78b0ec6a-b8c0-4d00-88c0-410be8ccd1fc",
+      "zighang-5bc3943b-455a-4a89-8caa-6a41a68f62ca",
+      "zighang-07eaca2d-a886-46a9-a97d-21e9c2aa2ea5",
+      "zighang-60a48281-bd67-41bc-ac96-f81e88699bfd",
+      "zighang-3a06e7d7-da76-4cd8-b703-2ff3a3d10ade",
+      "zighang-69df8e6a-48d1-4e60-9506-8ed7a66172ed",
+      "zighang-a3222335-b1b3-4921-9874-13e6ebda5db7",
+      "zighang-36b7b671-94f0-4114-bb18-bfa7940e728e",
+      "zighang-a578c57a-508c-491b-b793-bb3bba7efb4e",
+      "zighang-8be35271-f92b-4a30-9edf-d9f9cf3da754",
+      "zighang-72093579-bf3b-4ede-9edc-3665950ea149",
+      "zighang-837c75f5-a3f6-4bcf-8052-122fc3377d94",
+      "zighang-55881d9d-40fb-4e8b-8f5e-a856f62e60ec",
+      "zighang-50747b8d-7e8e-4157-bfe3-e51fd7eed045",
+      "zighang-733ce8ae-323f-4e74-b70b-8f72303ddc8e",
+      "zighang-0fcfda15-0723-4039-b88a-9cd107a019da"
     ],
     "자소설": [
       "jasoseol-105766",
@@ -3861,7 +3861,9 @@
     "피에스케이|2026-09-28|psk그룹9월직무별수시채용erpsap기계설계",
     "한진정보통신|2026-10-10|ai융합풀스택소프트웨어개발채용연계형대학인턴십",
     "이스트소프트|2026-09-27|미래내일일경험참여자모집회계세무기술지원마케팅회",
-    "넥스트그라운드|2026-10-02|인턴프론트엔드개발자프론트엔드"
+    "넥스트그라운드|2026-10-02|인턴프론트엔드개발자프론트엔드",
+    "LX엠엠에이|2026-09-27|lxmma2026년하반기신입경력사원수시채용e",
+    "현대위아|2026-09-28|2026년석박사연구장학생선발ai리서치전기전자"
   ],
   "last_crawled": "2026-09-20"
 }
