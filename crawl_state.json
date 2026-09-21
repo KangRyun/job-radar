@@ -1,26 +1,6 @@
 {
   "seen": {
     "직행": [
-      "zighang-4bf01af8-02c0-4b5d-94e1-302ed0f4f23e",
-      "zighang-1762167a-4c17-49db-b7b4-9e52e0170448",
-      "zighang-73d74fb2-9a87-48e2-9daf-39cfb9016f48",
-      "zighang-07b7f2f5-b3a0-4893-a809-32e67014f55d",
-      "zighang-dd12aaf1-4198-4dba-bf2a-4b9936a74c52",
-      "zighang-2ba4f84d-ee4b-439f-ba10-6ed03087bffa",
-      "zighang-c9c5e3ef-bfd0-40a1-9c2d-05312ea91843",
-      "zighang-1041d8db-aa9c-43b0-b594-d0c0df01266a",
-      "zighang-dc8bee9b-f656-462f-8701-436570bd82a6",
-      "zighang-d2af908f-e3d6-42a8-822f-792e2b12a0f8",
-      "zighang-c117c3f0-c342-428e-b5ec-79c90b92b57c",
-      "zighang-4954e6c2-b033-44ce-92e2-5cfdb027091c",
-      "zighang-0e12bb18-44d9-470c-9120-b3044a07b1e6",
-      "zighang-957af02c-8c7c-499c-95be-9ae1153fdeaf",
-      "zighang-f1a04422-b0bf-472b-9388-d9fbdf4a5e4d",
-      "zighang-dd989a90-f2cd-4968-ac70-60bc1742bcd9",
-      "zighang-18e90dda-bb90-402f-800d-2befd8b38bbf",
-      "zighang-f490cd11-83db-4f00-9f2a-b2df2210faa8",
-      "zighang-618289a5-81e1-4a16-88cf-88c12c5d7e8f",
-      "zighang-64f77b9a-f113-4886-b723-10df5c916442",
       "zighang-a1058aa2-130d-4e44-a411-abd2c5149164",
       "zighang-1e43e275-283a-4c67-b9cf-eea2d2dbeb49",
       "zighang-d4f57e0f-4aa0-4a95-89eb-fa74026bef51",
@@ -2000,7 +1980,27 @@
       "zighang-06bb2cf6-0c90-4f84-8385-311e82e79dcb",
       "zighang-2d91a74c-532d-40ae-a25a-a8924cd4de11",
       "zighang-ad83b118-ed34-437b-9811-8e9770221e17",
-      "zighang-a11eb176-c0ed-435c-9ca6-ded6530c82d7"
+      "zighang-a11eb176-c0ed-435c-9ca6-ded6530c82d7",
+      "zighang-0071c223-7795-456d-ad97-8afa69f9609d",
+      "zighang-3130e1c1-a7c9-4bef-8cc6-d023a08418b8",
+      "zighang-e9affa89-1d78-4f83-9065-a57ec975f50a",
+      "zighang-c8d07102-83f8-4949-a135-60f6e283cb70",
+      "zighang-309a682e-a9e7-4b5c-9224-8feaf97f41ff",
+      "zighang-ccaf246e-9400-4eb2-9ec0-ab62f94d2099",
+      "zighang-684a1fcc-16a4-4e63-b105-2c56cec78342",
+      "zighang-94168b17-ffda-4b4f-9a9a-3b615fab54dd",
+      "zighang-ee974b33-454e-48cf-b4de-6541a2054b9d",
+      "zighang-ec9e0835-a340-4470-85d0-9eb6cd31e846",
+      "zighang-0a0087ad-ee0b-414a-9f6d-7520bc8aa5d9",
+      "zighang-1e0a8407-b3ee-4460-9443-a630e735b618",
+      "zighang-ecf265c1-8704-436e-8733-0bfb9b55422b",
+      "zighang-983da109-31c7-4dc9-a7c9-dfe85188e847",
+      "zighang-8f10e310-dadf-4508-8e5f-25dd6b8af8ba",
+      "zighang-d8f0bc99-b1a0-4664-aab5-51d8678b99a3",
+      "zighang-d7b1fddb-e2c6-48d7-a1d6-2ef5f2121c7c",
+      "zighang-b080c7c4-8f2c-4f4c-a711-fc6483fc2642",
+      "zighang-3c7c4781-e66a-45b1-a139-86f735a9b2b6",
+      "zighang-adc55c60-ec47-4856-8ecc-917e9727e87f"
     ],
     "자소설": [
       "jasoseol-105766",
@@ -2149,7 +2149,9 @@
       "jasoseol-106350",
       "jasoseol-106337",
       "jasoseol-106302",
-      "jasoseol-106191"
+      "jasoseol-106191",
+      "jasoseol-106344",
+      "jasoseol-106343"
     ]
   },
   "cross_keys": [
@@ -3876,7 +3878,24 @@
     "동원그룹|2026-10-06|2026년하반기신입사원채용동원fb품질관리동원",
     "팜스코|2026-10-06|2026년신입경력공개채용팜스코사료사업품질관리",
     "KINX|2026-10-05|2026채용전환형인턴경력직수시채용네트워크데이",
-    "신협중앙회|2026-10-07|2027년신입직원일반직군및it직군채용it직군"
+    "신협중앙회|2026-10-07|2027년신입직원일반직군및it직군채용it직군",
+    "엠투소프트|2026-11-20|엠투소프트it기술지원엔지니어채용신입경력기타i",
+    "한국에너지공단|2026-10-01|신입직원채용형인턴채용경영지원데이터분석가",
+    "동원산업|2026-10-06|2026년하반기동원그룹신입사원채용데이터분석가",
+    "신협|2026-10-07|2027년신입직원일반직군및it직군채용기타it",
+    "네이버클라우드|2026-09-30|navercloudvideoagent연구개발",
+    "신협|2026-10-07|2027년신입직원일반직군및it직군채용기타은행",
+    "네이버클라우드|2026-09-30|navercloudhyperclovax학습데",
+    "한화비전|2026-10-11|2026테크라이프부문신입사원채용전기전자제어임",
+    "한솔홀딩스|2026-10-11|2026신입사원공개채용일반영업웹풀스택해외영업",
+    "한국문화정보원|2026-10-02|2026년하반기제2차직원채용비정규직비정규직육",
+    "케이아이엔엑스|2026-10-05|2026년하반기채용연계형인턴경력수시채용시스템",
+    "콘레브|2026-10-04|2026인턴스탭채용공고기타it개발",
+    "KINX|2026-10-05|2026채용전환형인턴경력직수시채용시스템네트워",
+    "코드비전|2026-10-01|airesearchengineer석사이상ai",
+    "한국조폐공사|2026-10-02|2027년도신입직원등공개채용소프트웨어엔지니어",
+    "한솔그룹|2026-10-11|2026신입사원공개채용한솔제지it기획한솔테크",
+    "우성그룹|2026-10-11|2026신입경력모집우성itax"
   ],
   "last_crawled": "2026-09-21"
 }
