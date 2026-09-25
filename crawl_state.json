@@ -1,26 +1,6 @@
 {
   "seen": {
     "직행": [
-      "zighang-ff0580cc-f8dd-4036-9171-aa9c63679bf2",
-      "zighang-f90242be-a3e9-43b5-b6a1-d28a86da749d",
-      "zighang-fbf0855f-5d79-4a23-890e-5f4582067020",
-      "zighang-8caf71b9-94dc-4958-bd0b-cd6518362e78",
-      "zighang-f9d4ee7b-acb9-436b-8209-b243c743df65",
-      "zighang-39001369-85e6-4edd-b2e7-99508302c358",
-      "zighang-7c992d68-378c-485b-85db-f0f08ae02eea",
-      "zighang-1c324a38-b4d0-40ec-a153-74d071e4c9f2",
-      "zighang-2bae3dd7-e54d-43c4-935d-3320d9081795",
-      "zighang-9a42c1af-9573-4966-853c-b93eb005cf25",
-      "zighang-112e3546-9427-4777-a94d-4c667827ef86",
-      "zighang-b0a8ab78-de69-4674-b3a0-ecf580bf74d2",
-      "zighang-e1d9ef72-d72a-451c-9040-c08c333b7c4d",
-      "zighang-b51ea949-6c77-478a-a5e6-7ca4c42537fe",
-      "zighang-8236cd73-db10-4988-a789-76e3814940d0",
-      "zighang-69e75f8b-fd2c-43b7-84eb-2092d3e05ad4",
-      "zighang-53250514-57d9-4c3c-83fc-acb1d39678f3",
-      "zighang-de5d3e36-dae5-4d6f-b6d1-6736861e2e17",
-      "zighang-fb6999e2-f424-415b-8a22-9ca061cdab80",
-      "zighang-72d1aa0c-1215-44af-91c6-fb8652898ed6",
       "zighang-66ea76bf-81ff-4f59-8407-ba5c871897e4",
       "zighang-c9a1b0ba-7081-4d97-8fce-505d236fd897",
       "zighang-76af1b57-ecbf-40c4-ad61-1f8720b014fb",
@@ -2000,7 +1980,27 @@
       "zighang-1d8880ab-6ae8-4834-bf27-26a34c0043ad",
       "zighang-d5dcf073-deef-454c-be7f-c0e0cce3b8c1",
       "zighang-3b2244de-6d2e-4be9-97f6-a05c1073327f",
-      "zighang-88b35d0d-d470-4f24-a924-812300a29d76"
+      "zighang-88b35d0d-d470-4f24-a924-812300a29d76",
+      "zighang-70eb4025-40f9-4812-8438-9056d4d747f4",
+      "zighang-8bd8a6f3-71d6-45cc-b4b3-0ba00ff4ac9f",
+      "zighang-96289960-154f-42a7-8e78-754856c44330",
+      "zighang-c06fdcb0-9b1c-4347-ae99-eb0d40e1831f",
+      "zighang-748c5cc9-97df-42fc-8898-4b557d5ce823",
+      "zighang-a6d944ee-f2d2-48a2-ac36-b15b004bcfbf",
+      "zighang-f63878e3-4fb9-44c6-b9cf-574b4dad70fd",
+      "zighang-10235546-c67e-4471-ac9a-17a16c4bf1f6",
+      "zighang-386aa93e-ed88-4deb-87c6-49654e27c9e2",
+      "zighang-e0b49d8f-ab78-4183-84b6-34b84ffd2655",
+      "zighang-3ad5d4f9-452d-49d6-9584-7c653bd52023",
+      "zighang-59d5e3a0-2a97-4c05-8082-ccc71afd0130",
+      "zighang-00e58636-9ccf-4531-9582-89b2727c60e3",
+      "zighang-304a2a80-f530-4526-9919-df16cdaeeb48",
+      "zighang-54df5c4f-fd7c-4786-be16-5c6b4010dda9",
+      "zighang-966c39db-4fcd-46f8-b22f-813c33fff92a",
+      "zighang-ac0aeb5e-39d1-4f5f-8ca7-7d4c6c518472",
+      "zighang-ea19f59e-5be1-40dc-8dc9-80a353183eb7",
+      "zighang-e45f5f0f-f9f4-4654-bcb1-191ed46d0e5c",
+      "zighang-9f1a67b7-9635-43a9-a980-ce51392cc77f"
     ],
     "자소설": [
       "jasoseol-105766",
@@ -4055,7 +4055,11 @@
     "플리토|2026-09-30|데이터관리검수중국어가능자기타ai데이터",
     "파이특허법률사무소|2026-10-23|채용파이특허법률사무소aitransformat",
     "코드비전|2026-10-23|ai서비스풀스택개발자웹풀스택생성형ai",
-    "시청자미디어재단|2026-10-08|시청자미디어재단2026년제5차채용채용형인턴기"
+    "시청자미디어재단|2026-10-08|시청자미디어재단2026년제5차채용채용형인턴기",
+    "JPMorganChase|2026-11-02|2027quantitativeresearch",
+    "kmac|2026-09-30|공공부문리서치데이터분석projectassis",
+    "인투씨엔에스|2026-11-01|병역특례전문연구요원sw개발자소프트웨어엔지니어",
+    "이스트시큐리티|2026-10-22|보안sw기술지원신입채용정보보호보안"
   ],
-  "last_crawled": "2026-09-24"
+  "last_crawled": "2026-09-25"
 }
