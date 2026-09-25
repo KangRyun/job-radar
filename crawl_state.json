@@ -1,26 +1,6 @@
 {
   "seen": {
     "직행": [
-      "zighang-e1396a65-5d9e-48b1-a66d-8749cdcbda3f",
-      "zighang-1739cafc-92ac-4df0-ac54-15b0952d3fb1",
-      "zighang-ca0012c1-499f-4f7e-ae2d-c1b30797c442",
-      "zighang-ff405f9d-887b-44b0-a2f0-47e7c0cd28e3",
-      "zighang-6df08fe4-b6b5-45ec-b4ac-5537af924a89",
-      "zighang-10b67f24-ab1b-4868-b98c-07020dacebac",
-      "zighang-f29e68da-11ed-4f67-a7d7-dde2dd1d7989",
-      "zighang-515c025d-2071-4825-bd99-0fcfb876dfd4",
-      "zighang-39dc4e7c-3dad-4139-9aa5-e0e7af464e1a",
-      "zighang-cb43f5df-d346-4e63-9d0c-410db541d074",
-      "zighang-808a1646-9e27-43ce-b62d-d334ac0762b3",
-      "zighang-a64233f0-15d5-42c7-a92a-513881453964",
-      "zighang-9563b99a-47a1-4d0e-8137-743055845439",
-      "zighang-3483ead9-8c52-4d69-b849-90892126f8dd",
-      "zighang-c05c81cb-dfd9-45ba-867e-9023ecd37f59",
-      "zighang-410a0081-4a62-414f-bce2-7d5c4d698004",
-      "zighang-d506658f-09b0-4595-876f-a09b3132445e",
-      "zighang-2b9f6633-6509-4e1c-b9d7-c83e178050b6",
-      "zighang-5c00829e-8dfd-47c6-8f6f-c47306f1775a",
-      "zighang-f452d934-7f06-4eb0-8eba-46cf6bb0187f",
       "zighang-6628d00b-4db9-4e2b-95f3-736d492abb2e",
       "zighang-f05d28e7-f056-4a94-90b5-e8285c9a772a",
       "zighang-ca815c33-7e39-47c8-8005-531559bda78d",
@@ -2000,7 +1980,27 @@
       "zighang-d5fd6bc7-489f-466b-84e9-ff320cc3c44a",
       "zighang-a8a10ff4-cd29-4ed5-af3a-126ce59deb8a",
       "zighang-c267143f-51fa-4b90-bee3-8b0b0235214a",
-      "zighang-274136c3-ec03-4034-9028-a3038a2a18d1"
+      "zighang-274136c3-ec03-4034-9028-a3038a2a18d1",
+      "zighang-a922d4b4-fd35-451c-bb5a-6dda79c552df",
+      "zighang-7480b8e9-92cc-4284-9a8f-03ebf4046a39",
+      "zighang-a7daa568-7477-4398-a8af-4c76944cf81d",
+      "zighang-d27e684f-beda-4dc0-b4d2-55db33385fb9",
+      "zighang-c3f917a9-0175-462d-a14d-eed9fd833694",
+      "zighang-5a083b62-cac2-47e2-99ad-1d92f9846d22",
+      "zighang-a66fa425-2d1a-462d-9c18-1a263de8696d",
+      "zighang-ab7bcadb-83e5-40a0-9338-3f6b55d7f8d1",
+      "zighang-6d5ed6ac-6504-4aa4-8ed6-2d0528366038",
+      "zighang-89a280e8-b4fb-4d28-ab44-03752957ed28",
+      "zighang-0d668cdf-caa8-43e7-9f64-9477bf577f5c",
+      "zighang-1dfc21c2-fdab-4bd5-9f25-1a285aa3f3a3",
+      "zighang-61f59bea-4769-4a74-a735-943202a26bca",
+      "zighang-a3d98b02-c1fa-4e32-a4ab-f76b2e2698c5",
+      "zighang-b4f06a9d-c2ce-4a44-9ca9-be5751976a0d",
+      "zighang-f2d76cdb-815c-4c01-a7be-526cd9b34992",
+      "zighang-31c6b135-16b2-4ac1-b098-632399a5d463",
+      "zighang-95646335-9aa6-439a-a204-3156102a720e",
+      "zighang-c86e3462-2320-4ea2-95fb-2ac8c2d705ab",
+      "zighang-e24d9d59-01a7-49b7-844f-cc0c07d87dcb"
     ],
     "자소설": [
       "jasoseol-105766",
@@ -4060,7 +4060,9 @@
     "kmac|2026-09-30|공공부문리서치데이터분석projectassis",
     "인투씨엔에스|2026-11-01|병역특례전문연구요원sw개발자소프트웨어엔지니어",
     "이스트시큐리티|2026-10-22|보안sw기술지원신입채용정보보호보안",
-    "농업정책보험금융원|2026-10-06|농업정책보험금융원신규직원채용공고행정사무운영기"
+    "농업정책보험금융원|2026-10-06|농업정책보험금융원신규직원채용공고행정사무운영기",
+    "엠케이피|2026-10-25|반도체제조업소프트웨어sw개발대졸신입채용소프트",
+    "메드트로닉|2026-10-16|salesanalystinternboston"
   ],
   "last_crawled": "2026-09-25"
 }
