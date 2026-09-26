@@ -1,13 +1,6 @@
 {
   "seen": {
     "직행": [
-      "zighang-f2362149-cf2f-4ff7-9111-7e3de776e864",
-      "zighang-5f9e3cb4-ef99-418a-835e-f7dd88b1e55e",
-      "zighang-c361bd14-91e6-4a9c-a593-32e20cd8979f",
-      "zighang-59173c6f-1caf-4cb2-80a0-356dee5e1b8c",
-      "zighang-810c9d11-b238-4e84-8dad-9cfc3fc8d5b2",
-      "zighang-97456f5b-5e2d-4541-8246-6f474a9d7069",
-      "zighang-88244199-1534-405d-b841-1d61d351010e",
       "zighang-1da96778-42af-48e1-8642-19444703ab3f",
       "zighang-29c9c093-146c-420b-8a27-25242f1d758b",
       "zighang-0b4c0939-413d-4010-b420-f0041ed4ceb9",
@@ -2000,7 +1993,14 @@
       "zighang-425d1aa9-2d03-4736-8703-030d3556959f",
       "zighang-04e58d12-2ccf-4a69-9045-fa88a761b9d5",
       "zighang-7cc83874-1b46-4de1-b870-e8ee578a1c26",
-      "zighang-bf9998a2-8427-4a15-a2bd-7b4ea9689e58"
+      "zighang-bf9998a2-8427-4a15-a2bd-7b4ea9689e58",
+      "zighang-7bd7ddc1-f7d8-4965-af1a-590c0aa230aa",
+      "zighang-4e0ed467-464f-42b8-b17b-c36c202d9e9d",
+      "zighang-9f55ee65-e68d-4696-8129-2fd4ed405b0c",
+      "zighang-47a3d3dd-99e8-4a2f-baa6-ff0eea065602",
+      "zighang-15d44c7c-cbf4-4234-8899-723638a4f1dd",
+      "zighang-706e7017-0d85-4d62-858b-fe2b9572af36",
+      "zighang-c05bb9a6-62ba-49af-8c3e-c7f044890828"
     ],
     "자소설": [
       "jasoseol-105766",
@@ -4064,7 +4064,9 @@
     "엠케이피|2026-10-25|반도체제조업소프트웨어sw개발대졸신입채용소프트",
     "메드트로닉|2026-10-16|salesanalystinternboston",
     "미노시스|2026-10-25|일본도쿄주미노시스소프트웨어개발자모집신입응용프",
-    "로슈|2026-10-15|machinelearningscientist"
+    "로슈|2026-10-15|machinelearningscientist",
+    "한국애보트|2026-10-02|softwareengineeri서버백엔드",
+    "입소스코리아|2026-10-19|areyouoneofournewquantit"
   ],
   "last_crawled": "2026-09-26"
 }
