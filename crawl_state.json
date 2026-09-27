@@ -1,8 +1,6 @@
 {
   "seen": {
     "직행": [
-      "zighang-29c9c093-146c-420b-8a27-25242f1d758b",
-      "zighang-0b4c0939-413d-4010-b420-f0041ed4ceb9",
       "zighang-dae1fdbd-fea2-4c99-85fb-62b3786be248",
       "zighang-2751a80f-28f9-42b6-9084-40173a4f75a3",
       "zighang-0b90016f-80e5-4d02-90b5-4254d8f7a6d2",
@@ -2000,7 +1998,9 @@
       "zighang-15d44c7c-cbf4-4234-8899-723638a4f1dd",
       "zighang-706e7017-0d85-4d62-858b-fe2b9572af36",
       "zighang-c05bb9a6-62ba-49af-8c3e-c7f044890828",
-      "zighang-81783506-b953-48ff-88e2-dc586e778574"
+      "zighang-81783506-b953-48ff-88e2-dc586e778574",
+      "zighang-3030481b-50d8-47f5-94d5-6e4d940b45c1",
+      "zighang-1ee926e4-214b-4d15-a5ad-a5e4bf1c29de"
     ],
     "자소설": [
       "jasoseol-105766",
@@ -4066,7 +4066,8 @@
     "미노시스|2026-10-25|일본도쿄주미노시스소프트웨어개발자모집신입응용프",
     "로슈|2026-10-15|machinelearningscientist",
     "한국애보트|2026-10-02|softwareengineeri서버백엔드",
-    "입소스코리아|2026-10-19|areyouoneofournewquantit"
+    "입소스코리아|2026-10-19|areyouoneofournewquantit",
+    "메드트로닉|2026-09-28|softwaretestengineeriiqa"
   ],
-  "last_crawled": "2026-09-26"
+  "last_crawled": "2026-09-27"
 }
