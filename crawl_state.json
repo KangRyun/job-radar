@@ -1,20 +1,6 @@
 {
   "seen": {
     "직행": [
-      "zighang-2751a80f-28f9-42b6-9084-40173a4f75a3",
-      "zighang-0b90016f-80e5-4d02-90b5-4254d8f7a6d2",
-      "zighang-dc5b82d5-718d-497d-a657-e37508bfa736",
-      "zighang-d30c81e2-9b8f-4cb8-83d2-0d5c60773668",
-      "zighang-3f856e74-4a45-4a13-a63a-1124b63dd791",
-      "zighang-8c315fd0-38e0-4235-888d-eca76a5ef83a",
-      "zighang-c74f277f-9af8-4140-9c82-c738d1467722",
-      "zighang-db30534a-42ae-4d5a-8c45-f866b761042c",
-      "zighang-734b7dd4-1c64-483e-96b9-48fbf32bb282",
-      "zighang-9746dea8-447f-4c2f-b1e0-56c53260a38d",
-      "zighang-f65e4027-6ef7-4b25-ba42-f54c507b0e63",
-      "zighang-18e389c8-4fea-4e2e-b8a7-9306b2851533",
-      "zighang-28c83d32-b275-44e4-8bb2-b5801c0d55f4",
-      "zighang-94eece34-85b2-4f9d-892e-12b5bfdbcc72",
       "zighang-0d64c327-8f64-4f25-a870-302c363f5f15",
       "zighang-d73e5544-a7c9-4f8a-ad76-323ebda6c6f2",
       "zighang-3a3f0f32-a528-446e-8767-72bb82012a09",
@@ -2000,7 +1986,21 @@
       "zighang-81783506-b953-48ff-88e2-dc586e778574",
       "zighang-3030481b-50d8-47f5-94d5-6e4d940b45c1",
       "zighang-1ee926e4-214b-4d15-a5ad-a5e4bf1c29de",
-      "zighang-3fcfb89e-1425-42fb-a066-12ca18ac8183"
+      "zighang-3fcfb89e-1425-42fb-a066-12ca18ac8183",
+      "zighang-5ee98477-f48b-4fff-aa5f-131fa908f7e5",
+      "zighang-216640c4-b827-477f-ab2e-24482eea9acd",
+      "zighang-2a48588f-7b5f-4a9f-931c-e4be865f45bf",
+      "zighang-6a43e141-066e-45e8-a871-2474a677898f",
+      "zighang-73034b81-3fbd-4a08-a41d-cf749ccb1e9b",
+      "zighang-476091ea-6fe2-4bf9-9e05-17f10c31c2d0",
+      "zighang-88db3ac9-115f-4a96-8991-1ce149a0bd88",
+      "zighang-2b5da742-c31f-4579-b33f-8591cafb9bd4",
+      "zighang-f59680e4-7797-4f81-bc63-a2c09546302f",
+      "zighang-f91c1d01-f111-4880-b103-f8b97e22c9f0",
+      "zighang-8f34f895-4ab8-4d6a-aeec-dc3a4c4d8dde",
+      "zighang-6a577dcf-3f66-4cd0-b441-37f4f10b6821",
+      "zighang-f3b91557-f4b0-40e3-8b85-4ef239d30e35",
+      "zighang-cb9bbdb1-6127-4ffb-8994-2531c200dae3"
     ],
     "자소설": [
       "jasoseol-105766",
@@ -2160,7 +2160,13 @@
       "jasoseol-106399",
       "jasoseol-106381",
       "jasoseol-106386",
-      "jasoseol-106406"
+      "jasoseol-106406",
+      "jasoseol-106417",
+      "jasoseol-106432",
+      "jasoseol-106427",
+      "jasoseol-106418",
+      "jasoseol-106408",
+      "jasoseol-106404"
     ]
   },
   "cross_keys": [
@@ -4067,7 +4073,20 @@
     "로슈|2026-10-15|machinelearningscientist",
     "한국애보트|2026-10-02|softwareengineeri서버백엔드",
     "입소스코리아|2026-10-19|areyouoneofournewquantit",
-    "메드트로닉|2026-09-28|softwaretestengineeriiqa"
+    "메드트로닉|2026-09-28|softwaretestengineeriiqa",
+    "이카운트|2026-10-14|개발자신입채용기타it개발",
+    "카를로|2026-10-28|cdb관련개발자vrar3d",
+    "이카운트|2026-10-14|이카운트개발자신입채용기타it개발",
+    "비에이치에스티|2026-10-28|머신비전sw개발자신입채용컴퓨터비전응용프로그램",
+    "링커리어|2026-11-22|링커리어백엔드개발채용전환형인턴서버백엔드",
+    "코오롱베니트|2026-10-07|2026하반기채용연계형인턴모집erpsap시스",
+    "SK|2026-10-14|preskalawithai해커톤모집기타ai데",
+    "코리안리재보험|2026-10-12|2026년신입채용ai전산",
+    "코오롱베니트|2026-10-07|2026하반기채용연계형인턴모집시스템개발금융시",
+    "이카운트|2026-10-14|개발자신입채용개발자",
+    "HS효성그룹|2026-10-11|2026년하반기신입공채hs효성it기획hs효성",
+    "한화솔루션/케미칼|2026-10-14|2026년하반기부문신입사원채용엔지니어rd공정",
+    "동서식품|2026-10-12|2026년대졸신입경력사원채용전산"
   ],
-  "last_crawled": "2026-09-27"
+  "last_crawled": "2026-09-28"
 }
