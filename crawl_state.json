@@ -1,26 +1,6 @@
 {
   "seen": {
     "직행": [
-      "zighang-ff4a5622-7604-46cc-bfbb-10027b937b35",
-      "zighang-27015ca4-6c4f-439a-a8ea-3b2bda293476",
-      "zighang-697f1eb9-c98c-49f9-ba0b-8868aebc3d89",
-      "zighang-0ab1c099-5e00-4fe8-89da-9e86f00a2a35",
-      "zighang-c26c92f7-ba74-4353-9adb-2ac268e268ae",
-      "zighang-d9330ef1-4759-4c2b-9a09-1f767a74d859",
-      "zighang-7dc2ff7d-feec-4e39-be63-f905d01a1e05",
-      "zighang-335be342-a8d5-4c87-a070-e8cbe8e2a7ab",
-      "zighang-1d3d72b2-b022-41f4-b337-962681d81b41",
-      "zighang-7a8640d1-3060-4dfa-8018-a86acff8077b",
-      "zighang-94b8ba96-2947-40ab-920b-96091bde9da0",
-      "zighang-21f0249c-2c8a-4dd6-9497-dc748b97fe8f",
-      "zighang-09906d22-0cf3-4036-a35e-bee8a3b8ce23",
-      "zighang-a7fc76e2-d5ae-4f03-b691-77604fce037f",
-      "zighang-17bfa9f2-b17f-4beb-bfd1-c6c58a8c16e6",
-      "zighang-fa6b5031-b6cd-4cdb-8a23-ddfe556cce81",
-      "zighang-20b896cd-f868-49e2-83ec-7adb47cf7e1d",
-      "zighang-40b84bf1-326c-462b-a494-243795d9f3f8",
-      "zighang-506d6026-bc41-4317-9e95-24687909a2a9",
-      "zighang-89d8e238-581c-459d-b3d5-8ea03c00378c",
       "zighang-fd6aeef9-ac28-4395-ba4b-f3d160eb0457",
       "zighang-c3b4439b-9d26-4963-b41e-18360bae4371",
       "zighang-b7eb718b-ed0d-476b-8941-fe6cf034eb79",
@@ -2000,7 +1980,27 @@
       "zighang-7d901241-be41-41e5-a970-1eb606fcc714",
       "zighang-16f87dc6-393f-415c-8cac-525fb509480a",
       "zighang-bde479b2-1c40-4fc6-8e51-65f4dbb2c870",
-      "zighang-2f3d6579-45b4-4c60-87c9-185b00163de4"
+      "zighang-2f3d6579-45b4-4c60-87c9-185b00163de4",
+      "zighang-2361b22e-51d0-41dc-9c7e-472bfdd8ca9b",
+      "zighang-ed0d2a97-4867-4cfb-be92-0e5bd5393743",
+      "zighang-fc110156-1c93-4d90-9fb0-2320feb3b5f3",
+      "zighang-dda170a2-e776-4d8c-a63c-ea33b396f15a",
+      "zighang-8d3139b8-6665-40b8-b1cb-dca0c1ee1e03",
+      "zighang-c1729011-1cc3-4503-bb98-0dc6ed927cda",
+      "zighang-fe5da3aa-19fd-4228-b6db-13587f8239f2",
+      "zighang-5029d5aa-d5b7-4086-abc9-ff3a57fe535c",
+      "zighang-3290595e-2d19-4dfa-bccf-b676815b1ecb",
+      "zighang-3acf27b5-c214-4941-9539-86243284e192",
+      "zighang-894853ac-e4f3-4dec-a610-91ce99102e1d",
+      "zighang-a44d82c8-d356-4a1a-b94e-c20831b111d6",
+      "zighang-f275a509-4f20-4cec-aa71-6895ebd6a101",
+      "zighang-5ddc0167-0188-4e41-a6b7-9ab888c102eb",
+      "zighang-ba782a44-dff1-4975-b7f3-8de77db9e59e",
+      "zighang-e354eeb8-91f1-4a91-a2af-2c25ad7b51af",
+      "zighang-8b33c847-b747-4f06-b8ea-c7d95e8aebb4",
+      "zighang-07c81b7a-fefd-4651-bdb2-29d37bd8a092",
+      "zighang-639d9c6f-9f50-499c-8cef-fed14807ad5e",
+      "zighang-cb11b7e1-0474-439e-ab67-0ec3d080c439"
     ],
     "자소설": [
       "jasoseol-105766",
@@ -2169,7 +2169,9 @@
       "jasoseol-106404",
       "jasoseol-106446",
       "jasoseol-106464",
-      "jasoseol-106453"
+      "jasoseol-106453",
+      "jasoseol-106477",
+      "jasoseol-106467"
     ]
   },
   "cross_keys": [
@@ -4147,7 +4149,27 @@
     "코오롱베니트|2026-10-07|2026년하반기채용연계형인턴모집데이터엔지니어",
     "원익홀딩스|2026-10-12|원익그룹2026신입공채공채소프트웨어엔지니어반",
     "현대모비스|2026-10-06|soc설계임베디드소프트웨어전기전자제어",
-    "이카운트|2026-10-14|2026년이카운트신입개발자채용erpsap서버"
+    "이카운트|2026-10-14|2026년이카운트신입개발자채용erpsap서버",
+    "에코마케팅|2026-10-19|2026하반기집중채용데이터엔지니어de신입채용",
+    "페이타랩|2026-10-29|iosdeveloper신입ios",
+    "모두닥|2026-10-11|채용전환형월500만원problemsolver",
+    "페이타랩|2026-10-29|windows개발자신입응용프로그램",
+    "드림디엔엠|2026-10-29|네트워크인프라운영신입채용시스템네트워크",
+    "한국리서치|2026-10-11|한국리서치여론조사사업본부인턴연구원채용데이터분",
+    "드림디엔엠|2026-10-29|인천idc운영신입채용시스템네트워크",
+    "프로티나|2026-10-23|프로티나electronicsengineer전",
+    "코리안리재보험|2026-10-12|2026년신입채용언더라이팅심사응용프로그램",
+    "분당서울대학교병원|2026-10-07|분당서울대학교병원단시간근무자기간제채용공고기타",
+    "신세계디에프|2026-10-12|27년신입사원채용공채일반영업온라인mdai서비",
+    "cj제일제당|2026-09-30|2026년하반기신입사원채용일반전형공채웹풀스택",
+    "이카운트|2026-10-14|2026년이카운트신입개발자채용프론트엔드서버백",
+    "이카운트|2026-10-14|이카운트개발자신입채용서버백엔드",
+    "금융결제원|2026-10-02|2027년도상반기신입직원채용공채기타기획전략경",
+    "이카운트|2026-10-14|2026년이카운트신입개발자채용기타it개발",
+    "신세계I&C|2026-10-12|신세계아이앤씨27년신입사원채용공채시스템네트워",
+    "코오롱베니트|2026-10-07|2026하반기채용연계형인턴모집시스템네트워크데",
+    "현대오토에버|2026-10-12|20264분기신입사원채용코딩전장embedde",
+    "램리서치코리아|2026-10-07|2026년하반기학사석사신입엔지니어모집data"
   ],
-  "last_crawled": "2026-09-29"
+  "last_crawled": "2026-09-30"
 }
