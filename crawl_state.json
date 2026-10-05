@@ -1,17 +1,6 @@
 {
   "seen": {
     "직행": [
-      "zighang-1925815b-e1a6-43e4-98ce-deb17b5b025f",
-      "zighang-6e4b0c65-4f83-44c3-a3c1-d2c38478cef0",
-      "zighang-c65cdb66-a156-4bfe-bd9a-718a15195c6d",
-      "zighang-ab6ec299-a5b3-487e-8f19-25b5b8ba1713",
-      "zighang-8b1b5971-9ca5-4a51-a9ff-9dab7155beb4",
-      "zighang-5c03c015-bbfc-47ba-aa3e-e17b42a27b05",
-      "zighang-cd30a8ae-3d81-4c46-b839-dcf0555911c8",
-      "zighang-8f5247fb-81a8-47d2-8fb6-2b78b970d45d",
-      "zighang-089cdf43-e565-4277-93a7-39e44ed9655a",
-      "zighang-c9b8d611-33ee-4f0f-afe1-5250b799d210",
-      "zighang-8f67d6ed-bf96-4054-b436-cb2a36559176",
       "zighang-daaf19f3-9805-437e-8d8e-65e40f2d55d9",
       "zighang-b76fef95-30c2-44a2-850a-0e0844d3d8c7",
       "zighang-0edafef6-deb9-46cf-92ce-c739869a3d93",
@@ -2000,7 +1989,18 @@
       "zighang-1746ebe3-3338-458f-ba0e-33871da0dd24",
       "zighang-e93aaad2-408a-488f-a65e-f99822789172",
       "zighang-d7171fb6-2867-4962-aa10-bd8799916738",
-      "zighang-af6d4b61-9e8e-4126-a547-820ad156454b"
+      "zighang-af6d4b61-9e8e-4126-a547-820ad156454b",
+      "zighang-f60e20b1-7341-49dc-bc58-ef00d7240b9e",
+      "zighang-556c2131-6f0b-48ab-ae2d-c274ee0be0c1",
+      "zighang-3cde1ec4-ed37-43a1-b610-836cb2b45be8",
+      "zighang-86524ffd-0360-48a4-b1e1-df5cf59ffc5f",
+      "zighang-07f0ef9c-6677-4d0f-9e5c-752020d1d0df",
+      "zighang-092f11d8-4cc7-45fa-b2ce-b8077e405e97",
+      "zighang-faa2077f-dfb5-4ba3-9239-8802a1f32284",
+      "zighang-0ecc52f8-e192-49fb-b893-4d1fa3381621",
+      "zighang-c92e99f7-4b25-4007-8a5e-261923eb4f4c",
+      "zighang-05e078b1-3d72-4783-8b52-97c477ae8698",
+      "zighang-8a33ae2d-7905-4cfd-888c-c2274e593b10"
     ],
     "자소설": [
       "jasoseol-105766",
@@ -2192,8 +2192,6 @@
     ]
   },
   "cross_keys": [
-    "스마일샤크|2026-09-10|스마일샤크aws클라우드엔지니어인턴채용주야교대",
-    "시스게이트|2026-09-06|경기안양의료기관전산실시스템운영담당자모집시스템",
     "커스텀파츠|2026-08-30|커스텀파츠2d3dai머신비전엔지니어개발자신입",
     "서원정보|2026-10-06|서원정보국가정보자원관리원광주센터시스템엔지니어",
     "핑바|2026-09-08|aisaas관련프론트엔드개발자채용건프론트엔드",
@@ -4191,7 +4189,9 @@
     "한전원자력연료|2026-10-15|한전원자력연료2026년도하반기체험형청년인턴채",
     "한전원자력연료(KNF)|2026-10-15|2026년도하반기체험형청년인턴채용기타it개발",
     "한국애보트|2026-11-20|2027rdcancerdiagnosticsi",
-    "도쿄일렉트론코리아|2026-10-18|2026년하반기채용softwareengine"
+    "도쿄일렉트론코리아|2026-10-18|2026년하반기채용softwareengine",
+    "시원기술|2026-11-04|임베디드c프로그램테스트및기술문서담당정규직채용",
+    "로슈|2026-11-01|internshipagenticaiforen"
   ],
-  "last_crawled": "2026-10-05"
+  "last_crawled": "2026-10-06"
 }
