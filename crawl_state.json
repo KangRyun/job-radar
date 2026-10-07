@@ -1,26 +1,6 @@
 {
   "seen": {
     "직행": [
-      "zighang-44c4ab1e-d449-4ad4-ad27-68a475788d12",
-      "zighang-206f6f0b-dd79-46fa-89e5-1f175650a476",
-      "zighang-e73d3122-8790-416c-b441-2ef72292bcc2",
-      "zighang-25b535d0-5d9e-4774-8ec6-b2b65f937761",
-      "zighang-c1abf012-a342-4610-9cf7-4cdbcb0bed2f",
-      "zighang-104a3624-d321-4e38-a0c4-beed4ca11341",
-      "zighang-d8eb5bac-8565-4eb0-9203-61bdc04fafaf",
-      "zighang-578be530-c73d-43a4-88f1-c3b694427589",
-      "zighang-c3a675e8-96d5-4e91-a471-f21671f5a45e",
-      "zighang-67efb03a-c9c9-4403-aeea-124b635c9a5e",
-      "zighang-607c8b31-aa0a-4023-a1ef-cf0403886c3f",
-      "zighang-ee1390ff-e74c-4162-8280-d936c4070cec",
-      "zighang-59f4f908-c0d6-4fb2-bc32-37e9657b1915",
-      "zighang-f4ab10b9-4e0a-47d7-bfee-10fef00be84e",
-      "zighang-2286f335-6759-4346-a222-04032f466e83",
-      "zighang-02b67250-2dfa-410e-a4aa-56f5ffd96cc8",
-      "zighang-cfc9d615-b4de-4f75-90cd-7861ba4001c0",
-      "zighang-a15ecd10-117a-49f0-9dbe-6f5b0dc55db4",
-      "zighang-ce221720-1704-4d3e-b534-db69404df722",
-      "zighang-435418e2-d078-48c5-b433-467de01acd4b",
       "zighang-1e66afa4-c725-4c3c-910f-596f91a25d50",
       "zighang-8cf4fa82-f725-453e-b369-67fc871842a6",
       "zighang-65d37fab-b74a-493e-aeaa-2181d5103600",
@@ -2000,7 +1980,27 @@
       "zighang-ea6c9251-f67c-4dbf-94fc-5bfdfbdcb8c7",
       "zighang-c412c743-9f30-4728-8a93-a8b354f5d1f1",
       "zighang-c2ac5494-cf0d-4ca7-bdec-5c0970dbf520",
-      "zighang-6c3522d8-fd46-4c69-a006-de1a9931b4b1"
+      "zighang-6c3522d8-fd46-4c69-a006-de1a9931b4b1",
+      "zighang-527a51b2-b079-4cbd-9fb7-1256e43096ab",
+      "zighang-ea076af8-3e2b-4078-9769-63260fd3d1de",
+      "zighang-b4309b33-b75c-4366-8b75-553593588bb2",
+      "zighang-2d1f3b45-9beb-498d-8afb-98502bba6e45",
+      "zighang-bf3ee5b1-ae8c-407a-b7e5-aab591c2f6e9",
+      "zighang-1cce830f-1be9-4319-9e95-6281238d25a8",
+      "zighang-0946e75c-f45e-49fb-ab85-bc8fb8c29cb2",
+      "zighang-add94b4c-2749-45e5-9830-1cf3a8cbf1d6",
+      "zighang-8ee31a99-e9fc-42f9-943b-163206d9bdb8",
+      "zighang-c48d3091-dc26-403d-bb01-b7b784b8b320",
+      "zighang-b46b02a0-d5df-4453-9c95-c1e935140560",
+      "zighang-82ba0f6a-379a-4a4b-8b3f-9db76e087fde",
+      "zighang-88bffe97-cbf1-4649-af21-c5315d7f1748",
+      "zighang-2282526b-8dd7-4802-a350-e3da7afd0752",
+      "zighang-319b30fb-982d-406d-b330-359fb03ce638",
+      "zighang-0f364178-8a4f-4a2a-b16e-1bc3a0d46380",
+      "zighang-57f9bebe-ce50-4033-bb19-c67ce3a37233",
+      "zighang-e3fbd50a-9d9c-4210-ba64-3ccf0426fa80",
+      "zighang-ab8a55e7-b2c3-4ce1-8135-c8b1a4c6c022",
+      "zighang-ec17316e-63de-4b8d-9e73-a827f0e7f619"
     ],
     "자소설": [
       "jasoseol-105766",
@@ -2195,18 +2195,11 @@
       "jasoseol-106602",
       "jasoseol-106594",
       "jasoseol-106561",
-      "jasoseol-106600"
+      "jasoseol-106600",
+      "jasoseol-106614"
     ]
   },
   "cross_keys": [
-    "에이아이딥|2026-09-17|주에이아이딥솔루션엔지니어신입채용공고정보보호보",
-    "넷마블|2026-09-17|넷마블ai전략실인턴모집공고영상음성ainlp",
-    "님버스네트웍스|2026-09-17|구로디지털it서비스모니터링사원모집시스템네트워",
-    "엔피날|2026-09-15|web개발엔지니어신입채용공고웹풀스택",
-    "러닝브레이커|2026-10-14|공연기획업무담당자모집qa테스트",
-    "하이텍알씨디코리아|2026-08-31|it신입사원모집erpmes전산운영erpsap",
-    "하이미디어컴퓨터학원|2026-09-17|취업연계자바와생성형ai를활용한차세대crm플랫",
-    "양전자시스템|2026-09-18|반도체및디스플레이장비sw개발신입사원채용응용프",
     "한국폴리텍대학분당융합기술교육원|2026-09-15|2026학년도하이테크과정신입생추가모집기타it",
     "노리앤드|2026-09-18|주노리앤드웹풀스택신입개발자채용웹풀스택",
     "짐싸|2026-09-30|백엔드개발자신입서버백엔드",
@@ -4198,7 +4191,15 @@
     "웹젠|2026-10-19|2026년하반기웹젠채용연계형인턴모집사업개발분",
     "웹젠|2026-10-19|2026년하반기채용연계형인턴십시스템네트워크p",
     "신한라이프생명보험|2026-10-16|2026신입채용dxictict개발dxicti",
-    "원테크스탑|2026-10-19|2027신입사원채용it엔지니어부문google"
+    "원테크스탑|2026-10-19|2027신입사원채용it엔지니어부문google",
+    "소바젠|2026-11-05|bioinformatics연구원신입데이터사이",
+    "롯데케미칼|2026-10-21|2026년10월첨단소재사업신입박사산학장학생채",
+    "슈프리마|2026-12-31|embeddedlinuxbsp개발임베디드소프",
+    "현대오토에버|2026-10-12|현대오토에버2026년4분기신입사원채용서버백엔",
+    "한영회계법인|2026-10-11|ey한영컨설팅부문emp팀ai인턴rag",
+    "SKAX|2026-10-11|skax2026년하반기skala신입사원공개채",
+    "건설공제조합|2026-10-26|2026년하반기신입직원채용공채사업전략기획응용",
+    "코원에너지서비스|2026-10-21|2026년하반기대졸신입사원g3모집cs서비스기"
   ],
   "last_crawled": "2026-10-07"
 }
