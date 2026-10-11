@@ -1,7 +1,6 @@
 {
   "seen": {
     "직행": [
-      "zighang-85ef7667-d2df-4c12-8534-dcf090e0ed74",
       "zighang-7b9d2bc6-8448-44c4-8b26-e46fba0f93e6",
       "zighang-4f9c65dc-f994-4599-b27b-5e9917f14c23",
       "zighang-02bbe4d1-f507-46af-8cc5-6629aede2507",
@@ -2000,7 +1999,8 @@
       "zighang-7c6a5df3-bcec-4564-9872-c213d3027bab",
       "zighang-6109e903-fe5f-4800-8811-b7b0790ac9fe",
       "zighang-d26dc7c9-43c2-4fbe-b39d-1105c9a01901",
-      "zighang-97235920-3da7-4efb-ac68-f4e23cf3c6bc"
+      "zighang-97235920-3da7-4efb-ac68-f4e23cf3c6bc",
+      "zighang-06362c74-6947-4fe9-9ace-d5ebc0ab1e66"
     ],
     "자소설": [
       "jasoseol-105766",
@@ -2206,9 +2206,6 @@
     ]
   },
   "cross_keys": [
-    "JPMorganChase|2026-10-12|dataforgoodhackathondata",
-    "JPMorganChase|2026-10-09|2026codeforgoodglasgow소프",
-    "톰슨로이터|2026-09-18|appliedresearchinternnlp",
     "SKtelecom|2026-08-30|2026juniortalent채용infra직",
     "SKtelecom|2026-08-30|2026juniortalent채용tech직군",
     "율촌|2026-09-13|전산보안실개발팀채용공고서버백엔드",
@@ -4205,7 +4202,10 @@
     "딜로이트(Deloitte)|2026-12-31|딜로이트안진회계법인tt부문정보보안컨설팅인턴정",
     "딜로이트(Deloitte)|2026-12-31|정보보안컨설팅인턴정보보호보안",
     "루씨웨어|2026-11-06|ragai솔루션기획및분석설계담당자채용소프트웨",
-    "코드비전|2026-11-06|ai서비스풀스택개발자mlops웹풀스택"
+    "코드비전|2026-11-06|ai서비스풀스택개발자mlops웹풀스택",
+    "KTds|2026-10-22|ktds2026년신입사원공개채용devopss",
+    "HS효성그룹|2026-10-11|2026년하반기hs효성그룹신입공채기타it개발",
+    "코드비전|2026-11-06|ai서비스풀스택개발자웹풀스택mlops"
   ],
   "last_crawled": "2026-10-11"
 }
