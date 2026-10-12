@@ -1,27 +1,6 @@
 {
   "seen": {
     "직행": [
-      "zighang-1128eee0-22dd-4844-ae29-8bd6bc532efa",
-      "zighang-057d2a51-6f3f-4737-9fa6-b2b1875e4fc0",
-      "zighang-143c932a-c723-424e-be39-291aaeb3d44b",
-      "zighang-39290840-0846-420c-a120-8ddb773d0c1a",
-      "zighang-d821c93d-6c25-4b44-9fad-156160a30841",
-      "zighang-067ca87c-46eb-4ce7-9f36-5210c7f357d7",
-      "zighang-a1736073-2891-4a53-be4e-e51407a19d6d",
-      "zighang-176aacfd-090f-4e08-b1d3-925609dd0dc3",
-      "zighang-85d358d8-8a56-4b22-b9dd-ad7791c31f0c",
-      "zighang-0d10c095-ee4a-4525-9d0b-3c3a43c50b8e",
-      "zighang-d673f7e5-910f-4091-b8b0-55c5c10e1ba5",
-      "zighang-f6ed63df-5687-4329-a6d2-23307b91ec87",
-      "zighang-769eb70b-f27c-41db-b1da-2595b4f652e1",
-      "zighang-c3e22e82-ed88-479d-a520-031053ba18c6",
-      "zighang-bf9fd9e6-cdcb-4360-8dfd-8f64e7388950",
-      "zighang-f9308b71-3e3c-488f-aaaa-b6038e6c3e24",
-      "zighang-de90cefe-fd04-42a8-ba73-89e94687f1da",
-      "zighang-c996ca0a-5cf2-45b7-93ff-8cec0441fa91",
-      "zighang-94b3f3c5-8102-431a-8476-e184b78c6a30",
-      "zighang-efecd6c9-efdc-4899-b965-63b5b7d782d9",
-      "zighang-7684a221-1178-48a9-9cac-f85e74134833",
       "zighang-aa4a94e8-55b7-4b4a-bddb-fbb853f05eae",
       "zighang-a5e453f8-0123-4787-bf16-59c8bf684074",
       "zighang-0285e6c4-74a4-4982-ab0c-6a2bbbe11585",
@@ -2000,7 +1979,28 @@
       "zighang-ebce6bba-bd2e-4bbc-b40f-2b0527e9b1e8",
       "zighang-913ec722-a47d-4986-8e73-5d49d895a5b4",
       "zighang-30d74ed1-5eda-46f9-b602-164e633c0598",
-      "zighang-4a1017f5-0d53-4ca3-9e5f-b018148c4976"
+      "zighang-4a1017f5-0d53-4ca3-9e5f-b018148c4976",
+      "zighang-f13fa422-bc2e-4d3b-8230-ee3152e3f83d",
+      "zighang-3465f517-e47d-4f3e-b76d-cb9ac7d5ebbd",
+      "zighang-f41d43ad-2b72-46dd-8a02-c88324bbc44a",
+      "zighang-777ff8e8-4d2a-47cf-b873-372233e4a1c2",
+      "zighang-b368475e-de99-4dc1-bbc4-121f5868dd8a",
+      "zighang-5f2490b1-6428-464c-8b1a-7843090181cc",
+      "zighang-5ec7ee54-bfb7-459c-8d0b-4beea70adfb4",
+      "zighang-79653478-ad24-42f9-a769-94b2dcf8ffac",
+      "zighang-128d757e-07ed-4831-9013-eca62323dcc0",
+      "zighang-5507289a-1ae1-4b0f-81aa-bea81b3cccba",
+      "zighang-bad71657-00da-4c72-a810-d653c0bb47b3",
+      "zighang-ccca743b-88eb-42d9-807d-35fb37eea394",
+      "zighang-bc3b5217-7f69-4e64-bea9-4cef609e44ac",
+      "zighang-713f4609-d7ea-49bc-86c6-1807f20214ce",
+      "zighang-955e19b7-5986-4c9a-ae47-2e71b63ac5f1",
+      "zighang-8bf13464-fcb7-4de8-81da-8a4c55cd5c4d",
+      "zighang-8a467f7b-94c6-42a6-98e2-339d4769a630",
+      "zighang-f7371111-d388-40b5-b8fc-b546d1713202",
+      "zighang-34ed7e2a-8229-4a94-b015-d9a9852072b7",
+      "zighang-1881b095-f37b-4e80-be45-f0429386a7c7",
+      "zighang-1432ccc2-a15a-4683-a0e0-e55e5ac002ce"
     ],
     "자소설": [
       "jasoseol-105766",
@@ -2206,19 +2206,11 @@
       "jasoseol-106673",
       "jasoseol-106633",
       "jasoseol-106607",
-      "jasoseol-106616"
+      "jasoseol-106616",
+      "jasoseol-106640"
     ]
   },
   "cross_keys": [
-    "(사)한국아이알협의회|2026-08-30|한국ir협의회2026년도신입사원채용공고프로그",
-    "한국예탁결제원|2026-09-01|한국예탁결제원2026년신입직원채용공고dba회",
-    "크레비스파트너스|2026-09-01|인턴saassoftwareengineer서버",
-    "버즈빌|2026-09-30|광고운영시스템백엔드개발자전문연구요원편입전직가",
-    "빌드잇|2026-09-18|productengineerfrontend2",
-    "빌드잇|2026-09-18|productengineerbackend2년",
-    "티이에프|2026-09-30|기술영업본부자사sw현장설치및유지보수엔지니어채",
-    "한국무역보험공사|2026-08-28|한국무역보험공사2026년하반기일반직신입사원채",
-    "메이아이|2026-09-30|mlengineer머신러닝엔지니어머신러닝엔지",
     "에스클래스랩|2026-09-17|에스클래스랩에서재택가능한마케팅분석인턴을구인합",
     "하나금융융합기술원|2026-09-01|하나금융ti2026년하반기하나금융융합기술원체",
     "톰슨로이터|2026-09-04|aprendiz기타it개발",
@@ -4209,7 +4201,16 @@
     "한국수력원자력(KHNP)|2026-10-21|2026년도제2차체험형청년인턴선발ai인재전형",
     "아이센스|2026-11-11|2026하반기신입경력대규모채용cgms알고리즘",
     "AK아이에스|2026-10-28|애경그룹2027년신입사원공개채용it담당",
-    "푸른저축은행|2026-10-23|2026년신입직원공개채용금융일반it전산it전"
+    "푸른저축은행|2026-10-23|2026년신입직원공개채용금융일반it전산it전",
+    "지우전자|2026-11-11|신입연구원채용임베디드소프트웨어전기전자제어",
+    "평화이즈|2026-10-31|평화이즈개발병원업무sw응용프로그램",
+    "윈즈아이티서비스|2026-11-11|근무지용산하이브pc및oa기기유지보수신입사원채",
+    "이노솔루텍|2026-11-11|네트워크보안부문신입사원모집시스템네트워크",
+    "LG에릭슨|2026-10-26|dataengineer데이터엔지니어머신러닝엔",
+    "데이블|2026-11-30|데이블jrmlengineer머신러닝엔지니어채",
+    "넥스트테크놀로지|2026-11-02|보안장비구축및유지보수엔지니어신입정보보호보안",
+    "넛지헬스케어|2026-12-11|캐시워크ios개발채용전환형인턴ios",
+    "SK이터닉스|2026-10-26|2027년채용연계형인턴공개채용사업개발ess사"
   ],
-  "last_crawled": "2026-10-12"
+  "last_crawled": "2026-10-13"
 }
