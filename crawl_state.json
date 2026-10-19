@@ -1,14 +1,6 @@
 {
   "seen": {
     "직행": [
-      "zighang-ba885dbc-7362-4b64-bb70-751273caee43",
-      "zighang-6c1ac309-e86d-492d-a101-e42400d6cb4f",
-      "zighang-e7136d27-4bdb-4aa7-99fa-2dbbb86f4687",
-      "zighang-320c647a-7457-4437-89f2-400542bf48b8",
-      "zighang-c6d52201-243d-41db-ac03-8b16375bb465",
-      "zighang-f307e973-aced-4381-83a4-11f6f8327f5d",
-      "zighang-9a44aa50-b245-4fa8-9660-8f9ed8a6bf76",
-      "zighang-b5e462c5-c85e-4df5-92d7-f0b6c0c0aefd",
       "zighang-04f5d180-49a4-4b93-9fef-21b66f0624aa",
       "zighang-0dadf6a0-8126-4675-84b0-aae397c12bf1",
       "zighang-342ec331-7026-4997-aade-6e1d8950c8be",
@@ -2000,7 +1992,15 @@
       "zighang-d8fe5fc6-5d3b-4183-a2d4-6adeebc902dc",
       "zighang-834a55c8-7a8a-4293-8936-270907cafa07",
       "zighang-1a1d9dde-257d-4df4-93aa-ec97cd81dd01",
-      "zighang-2ebdfaa8-177c-40e1-888f-3f0bc8a921fb"
+      "zighang-2ebdfaa8-177c-40e1-888f-3f0bc8a921fb",
+      "zighang-4142f49c-a4ac-4728-8297-742ff47bd426",
+      "zighang-abb13bd7-21ca-4a9e-99b9-19541a6f3987",
+      "zighang-de39c5d7-84e0-4924-84cb-b07e1a5c007e",
+      "zighang-ac0f8edc-d148-4644-821e-158cd5e2268f",
+      "zighang-aac67496-0f5e-4080-bb12-ac67549adfd5",
+      "zighang-bf43cb23-2c2a-4ea8-83ce-f0e6c9465617",
+      "zighang-3abc4ac2-31a7-4d63-ad65-2e5c59b9d9c9",
+      "zighang-62239cd0-68a9-4196-b4a7-fe6bdcda6153"
     ],
     "자소설": [
       "jasoseol-105766",
@@ -2224,7 +2224,6 @@
     ]
   },
   "cross_keys": [
-    "다산소프트|2026-09-27|자바개발자정규직모집신입소프트웨어엔지니어",
     "지엘엔인터내셔널|2026-09-13|it본부백엔드개발인턴개발2부서버백엔드",
     "피씨엔|2026-09-27|네트워크엔지니어채용공고시스템네트워크",
     "현대모비스|2026-09-10|무빙디스플레이모터제어개발전기전자제어임베디드소",
@@ -4223,7 +4222,8 @@
     "코드비전|2026-11-13|ai서비스풀스택개발자mlops서버백엔드",
     "한국갤럽조사연구소|2026-10-22|한국갤럽조사연구소gallupkorea마케팅리",
     "중앙백신연구소|2026-10-29|주중앙백신연구소it인프라및시스템운영부문정보보",
-    "PTKOREA|2026-12-31|ptkorea인턴2027년상반기대기업신제품글"
+    "PTKOREA|2026-12-31|ptkorea인턴2027년상반기대기업신제품글",
+    "펜타시스템테크놀러지|2026-11-02|펜타시스템40기신입사원공개채용소프트웨어엔지니"
   ],
-  "last_crawled": "2026-10-18"
+  "last_crawled": "2026-10-19"
 }

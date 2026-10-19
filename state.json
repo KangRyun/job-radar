@@ -1,14 +1,6 @@
 {
-  "last_checked": "2026-10-18T05:19:00.000Z",
+  "last_checked": "2026-10-19T00:42:00.000Z",
   "notified": [
-    "3f42746d-15ab-8195-ba31-fec22cd987b2",
-    "3f42746d-15ab-81a6-8e52-d7d6eb1f1d27",
-    "3f42746d-15ab-8131-b94c-cd9f9104db6e",
-    "3f42746d-15ab-8192-b2dc-c292a01683ad",
-    "3f42746d-15ab-81ee-85bf-cd097969f01d",
-    "3f42746d-15ab-8187-9985-fd85bedfeea7",
-    "3f42746d-15ab-81ab-9472-c406fba7a356",
-    "3f42746d-15ab-819f-b352-dabec7f87d72",
     "3f42746d-15ab-81b5-8709-fcb5e0a9305e",
     "3f42746d-15ab-81d5-ba65-e477a4b5399c",
     "3f42746d-15ab-8184-b6cf-f4f69e6c59f7",
@@ -500,7 +492,15 @@
     "3fd2746d-15ab-81fd-8fd6-ee7b45de014d",
     "3fd2746d-15ab-8108-980f-e3de51f91d9e",
     "3fd2746d-15ab-816b-93b5-dc047bfe02ee",
-    "3fd2746d-15ab-8122-9637-dcf3cc7eaa6c"
+    "3fd2746d-15ab-8122-9637-dcf3cc7eaa6c",
+    "3fe2746d-15ab-8145-a055-d385f09eed37",
+    "3fe2746d-15ab-81b2-8c4f-c34bb2b758ae",
+    "3fe2746d-15ab-8101-b750-f0ccb392d563",
+    "3fe2746d-15ab-8183-9b74-fc822c7bfe2d",
+    "3fe2746d-15ab-8144-99a9-d1cb340876af",
+    "3fe2746d-15ab-8162-b0b3-c8e3e5bdc788",
+    "3fe2746d-15ab-8170-8e74-d23f13d4cd9e",
+    "3fe2746d-15ab-8141-b091-fb564896cb5a"
   ],
   "pending": []
 }
